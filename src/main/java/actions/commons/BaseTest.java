@@ -1,5 +1,6 @@
 package actions.commons;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.Parameters;
 
+import java.sql.DriverManager;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -16,27 +18,27 @@ public class BaseTest {
 
     protected WebDriver getBrowserDriver(String browserName) {
         if (browserName.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", projectPath + "/src/main/browserDrivers/geckodriver.exe");
+            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
         if (browserName.equalsIgnoreCase("h_firefox")) {
-            System.setProperty("webdriver.gecko.driver", projectPath + "/src/main/browserDrivers/geckodriver.exe");
+            WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--headless");
             options.addArguments("window-size=1920x1080");
             driver = new FirefoxDriver(options);
         } else if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", projectPath + "/src/main/browserDrivers/chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
         } else if (browserName.equalsIgnoreCase("h_chrome")) {
-            System.setProperty("webdriver.chrome.driver", projectPath + "/src/main/browserDrivers/chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
             options.addArguments("window-size=1920x1080");
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("edge")) {
-            System.setProperty("webdriver.edge.driver", projectPath + "/src/main/browserDrivers/msedgedriver.exe");
+            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         } else {
             throw new RuntimeException("Browser name invalid");
