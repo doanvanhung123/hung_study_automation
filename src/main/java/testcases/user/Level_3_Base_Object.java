@@ -1,8 +1,8 @@
 package testcases.user;
 
 import actions.commons.BasePage;
-import actions.pageObjects.HomePageObject;
-import actions.pageObjects.RegisterPageObject;
+import actions.pageObjects.user.UserHomePageObject;
+import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -16,8 +16,8 @@ public class Level_3_Base_Object extends BasePage {
     WebDriver driver;
     String emailAdress;
     String firstName,lastName,password;
-    HomePageObject homePage ;
-    RegisterPageObject registerPage ;
+    UserHomePageObject homePage ;
+    UserRegisterPageObject registerPage ;
     String projectPath = System.getProperty("user.dir");
 
 //    @BeforeClass
@@ -39,8 +39,8 @@ public class Level_3_Base_Object extends BasePage {
         firstName = "Automation";
         lastName = "FC";
         password = "123456";
-        homePage = new HomePageObject(driver);
-        registerPage = new RegisterPageObject(driver);
+        homePage = new UserHomePageObject(driver);
+        registerPage = new UserRegisterPageObject(driver);
     }
 
     @Test

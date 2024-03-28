@@ -1,13 +1,9 @@
 package testcases.user;
 
-import actions.commons.BasePage;
 import actions.commons.BaseTest;
-import actions.pageObjects.HomePageObject;
-import actions.pageObjects.RegisterPageObject;
+import actions.pageObjects.user.UserHomePageObject;
+import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,14 +11,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Level_4_Multiple_Browser extends BaseTest {
     WebDriver driver;
     String emailAdress;
     String firstName,lastName,password;
-    HomePageObject homePage ;
-    RegisterPageObject registerPage ;
+    UserHomePageObject homePage ;
+    UserRegisterPageObject registerPage ;
 
 
     @Parameters("browser")
@@ -33,8 +28,8 @@ public class Level_4_Multiple_Browser extends BaseTest {
         firstName = "Automation";
         lastName = "FC";
         password = "123456";
-        homePage = new HomePageObject(driver);
-        registerPage = new RegisterPageObject(driver);
+        homePage = new UserHomePageObject(driver);
+        registerPage = new UserRegisterPageObject(driver);
     }
 
     @Test

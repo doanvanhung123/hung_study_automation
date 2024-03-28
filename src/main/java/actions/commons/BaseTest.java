@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.Parameters;
 
 import java.sql.DriverManager;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -47,5 +48,10 @@ public class BaseTest {
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         return driver;
+    }
+
+    protected int generateFakeNumber() {
+        Random rand = new Random();
+        return rand.nextInt(9000);
     }
 }

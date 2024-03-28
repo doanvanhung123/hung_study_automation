@@ -10,16 +10,16 @@
     <test name="Run On Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testcases.user.Level_5_Page_Factory"/>
+            <class name="testcases.user.Level_7_Switch_Page"/>
         </classes>
     </test> <!-- Test -->
 
-    <test name="Run On Edge">
-        <parameter name="browser" value="edge"></parameter>
-        <classes>
-            <class name="testcases.user.Level_5_Page_Factory"/>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test name="Run On Edge">-->
+<!--        <parameter name="browser" value="edge"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testcases.user.Level_5_Page_Factory"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
 
 </suite> <!-- Suite -->

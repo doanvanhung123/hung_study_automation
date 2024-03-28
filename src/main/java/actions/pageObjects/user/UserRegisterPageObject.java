@@ -1,14 +1,13 @@
-package actions.pageObjects;
+package actions.pageObjects.user;
 
 import actions.commons.BasePage;
 import interfaces.PageUIs.RegisterPageUI;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
-public class RegisterPageObject extends BasePage {
+public class UserRegisterPageObject extends BasePage {
     WebDriver driver;
 
-    public RegisterPageObject( WebDriver driver){
+    public UserRegisterPageObject(WebDriver driver){
         this.driver =driver;
     }
     public void clickToRegisterButton() {

@@ -1,19 +1,21 @@
-package actions.pageObjects;
+package actions.pageObjects.user;
 
 import actions.commons.BasePage;
+import actions.commons.PageGeneratorManager;
 import interfaces.PageUIs.LoginPageUI;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPageObject extends BasePage {
+public class UserLoginPageObject extends BasePage {
     private WebDriver driver;
 
-    public LoginPageObject(WebDriver driver) {
+    public UserLoginPageObject(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void clickToLoginButton() {
+    public UserHomePageObject clickToLoginButton() {
         waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
         clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+        return PageGeneratorManager.getUserHomePage(driver);
     }
 
     public String getErrorMessageAtEmailTextbox() {
@@ -34,5 +36,11 @@ public class LoginPageObject extends BasePage {
     public void inputToPasswordTextBox(String password) {
         waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
         sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+    }
+
+    public UserHomePageObject loginAsUser(String email,String password) {
+        inputToEmailTextBox(email);
+        inputToPasswordTextBox(password);
+        return clickToLoginButton();
     }
 }

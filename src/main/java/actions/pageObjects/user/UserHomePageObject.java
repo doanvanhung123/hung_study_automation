@@ -1,33 +1,37 @@
-package actions.pageObjects;
+package actions.pageObjects.user;
 
 import actions.commons.BasePage;
+import actions.commons.PageGeneratorManager;
 import interfaces.PageUIs.HomePageUI;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePageObject extends BasePage {
+public class UserHomePageObject extends BasePage {
     private WebDriver driver;
-    public HomePageObject(WebDriver driver){
+    public UserHomePageObject(WebDriver driver){
         this.driver = driver;
     }
 
-    public void clickToRegisterLink() {
+    public UserRegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver,HomePageUI.REGISTER_LINK);
         clickToElement(driver,HomePageUI.REGISTER_LINK);
+        return PageGeneratorManager.getUserRegisterPage(driver);
     }
 
-    public void clickToMyAccountLink() {
+    public UserCustomerInfoObject clickToMyAccountLink() {
         waitForElementClickable(driver,HomePageUI.MY_ACCOUNT_LINK);
         clickToElement(driver,HomePageUI.MY_ACCOUNT_LINK);
+        return PageGeneratorManager.getUserCustomerInfor(driver);
     }
 
-    public void clickToLoginLink() {
+    public UserLoginPageObject clickToLoginLink() {
         waitForElementClickable(driver,HomePageUI.LOGIN_LINK);
         clickToElement(driver,HomePageUI.LOGIN_LINK);
+        return PageGeneratorManager.getUserLoginPagePage(driver);
     }
 
     public boolean isMyAccountLinkDisplayed() {
         waitForElementVisible(driver,HomePageUI.MY_ACCOUNT_LINK);
         return isElementDisplayed(driver,HomePageUI.MY_ACCOUNT_LINK);
     }
+
 }

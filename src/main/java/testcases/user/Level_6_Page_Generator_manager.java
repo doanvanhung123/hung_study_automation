@@ -1,19 +1,18 @@
 package testcases.user;
 
-import actions.commons.BasePage;
+import actions.commons.BaseTest;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_3_Base_Object_Login extends BasePage {
+public class Level_6_Page_Generator_manager extends BaseTest {
     WebDriver driver;
     String emailAdress;
     String firstName,lastName,invalidEmail,notFoundEmail,validEmail,password;
@@ -23,11 +22,11 @@ public class Level_3_Base_Object_Login extends BasePage {
     String projectPath = System.getProperty("user.dir");
 
 
+    @Parameters("browser")
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass(String browserName) {
 
-        System.setProperty("webdriver.gecko.driver", projectPath + "/src/main/browserDrivers/geckodriver.exe");
-        driver = new FirefoxDriver();
+        driver = getBrowserDriver(browserName);
         emailAdress = "afc" + generateFakeNumber() + "@mail.vn";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://demo.nopcommerce.com/");
@@ -39,7 +38,6 @@ public class Level_3_Base_Object_Login extends BasePage {
         notFoundEmail = "afc" + generateFakeNumber() + "@mail.vn";
         password = "123456";
         homePage = new UserHomePageObject(driver);
-        registerPage = new UserRegisterPageObject(driver);
 
         System.out.println("Pre-condition:Step 01");
         homePage.clickToRegisterLink();
@@ -105,10 +103,7 @@ public class Level_3_Base_Object_Login extends BasePage {
         Assert.assertEquals(homePage.isMyAccountLinkDisplayed(),true);
     }
 
-    public int generateFakeNumber() {
-        Random rand = new Random();
-        return rand.nextInt(9000);
-    }
+
 
     public void afterClass() {
         driver.quit();
