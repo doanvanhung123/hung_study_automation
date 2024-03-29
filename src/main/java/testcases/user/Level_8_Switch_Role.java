@@ -63,6 +63,8 @@ public class Level_8_Switch_Role extends BaseTest {
     public void Login_02_Admin() {
         userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
        adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
+
+
     }
 
 

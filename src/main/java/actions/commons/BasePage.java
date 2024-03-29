@@ -1,7 +1,7 @@
 package actions.commons;
 
 import actions.pageObjects.user.*;
-import interfaces.PageUIs.BasePageUI;
+import interfaces.PageUIs.user.UserBasePageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -279,25 +279,25 @@ public class BasePage {
 
 
     public UserCustomerInfoObject openCustomerInfoPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.CUSTOMER_INFO_LINK);
-        clickToElement(driver,BasePageUI.CUSTOMER_INFO_LINK);
+        waitForElementClickable(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+        clickToElement(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
         return PageGeneratorManager.getUserCustomerInfor(driver);
     }
     public UserAddressPageObject openAddressPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
-        clickToElement(driver,BasePageUI.ADDRESS_LINK);
+        waitForElementClickable(driver, UserBasePageUI.ADDRESS_LINK);
+        clickToElement(driver, UserBasePageUI.ADDRESS_LINK);
         return PageGeneratorManager.getUserAddressPage(driver);
     }
 
     public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.MY_PRODUCT_REVIEW_lINK);
-        clickToElement(driver,BasePageUI.MY_PRODUCT_REVIEW_lINK);
+        waitForElementClickable(driver, UserBasePageUI.MY_PRODUCT_REVIEW_lINK);
+        clickToElement(driver, UserBasePageUI.MY_PRODUCT_REVIEW_lINK);
         return PageGeneratorManager.getUserMyProductPage(driver);
     }
 
     public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
-        waitForElementClickable(driver, BasePageUI.REWARD_POINT_LINK);
-        clickToElement(driver,BasePageUI.REWARD_POINT_LINK);
+        waitForElementClickable(driver, UserBasePageUI.REWARD_POINT_LINK);
+        clickToElement(driver, UserBasePageUI.REWARD_POINT_LINK);
         return PageGeneratorManager.getUserRewardPointPage(driver);
     }
 

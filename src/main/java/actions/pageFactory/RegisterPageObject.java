@@ -1,13 +1,10 @@
 package actions.pageFactory;
 
-import actions.commons.BasePage;
 import actions.commons.BasePageFactory;
-import interfaces.PageUIs.RegisterPageUI;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class RegisterPageObject extends BasePageFactory {
     WebDriver driver;
