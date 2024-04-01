@@ -1,5 +1,6 @@
 package actions.commons;
 
+import actions.pageObjects.admin.AdminDashBoardPageObject;
 import actions.pageObjects.admin.AdminLoginPageObject;
 import actions.pageObjects.user.*;
 import org.openqa.selenium.WebDriver;
@@ -34,5 +35,9 @@ public class PageGeneratorManager {
     }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
         return new AdminLoginPageObject(driver);
+    }
+
+    public static AdminDashBoardPageObject getAdminDashBoard(WebDriver driver) {
+        return new AdminDashBoardPageObject(driver);
     }
 }

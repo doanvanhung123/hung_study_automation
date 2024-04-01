@@ -1,5 +1,7 @@
 package actions.commons;
 
+import interfaces.PageUIs.admin.AdminLoginPageUI;
+import interfaces.PageUIs.user.BasePageUI;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,9 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.Parameters;
 
-import java.sql.DriverManager;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -44,7 +44,7 @@ public class BaseTest {
         } else {
             throw new RuntimeException("Browser name invalid");
         }
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
         return driver;
@@ -54,4 +54,5 @@ public class BaseTest {
         Random rand = new Random();
         return rand.nextInt(9000);
     }
-}
+
+   }

@@ -1,7 +1,9 @@
 package actions.commons;
 
+import actions.pageObjects.admin.AdminLoginPageObject;
 import actions.pageObjects.user.*;
-import interfaces.PageUIs.user.UserBasePageUI;
+import interfaces.PageUIs.admin.AdminLoginPageUI;
+import interfaces.PageUIs.user.BasePageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -279,25 +281,25 @@ public class BasePage {
 
 
     public UserCustomerInfoObject openCustomerInfoPage(WebDriver driver) {
-        waitForElementClickable(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
-        clickToElement(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+        waitForElementClickable(driver, BasePageUI.CUSTOMER_INFO_LINK);
+        clickToElement(driver, BasePageUI.CUSTOMER_INFO_LINK);
         return PageGeneratorManager.getUserCustomerInfor(driver);
     }
     public UserAddressPageObject openAddressPage(WebDriver driver) {
-        waitForElementClickable(driver, UserBasePageUI.ADDRESS_LINK);
-        clickToElement(driver, UserBasePageUI.ADDRESS_LINK);
+        waitForElementClickable(driver, BasePageUI.ADDRESS_LINK);
+        clickToElement(driver, BasePageUI.ADDRESS_LINK);
         return PageGeneratorManager.getUserAddressPage(driver);
     }
 
     public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
-        waitForElementClickable(driver, UserBasePageUI.MY_PRODUCT_REVIEW_lINK);
-        clickToElement(driver, UserBasePageUI.MY_PRODUCT_REVIEW_lINK);
+        waitForElementClickable(driver, BasePageUI.MY_PRODUCT_REVIEW_lINK);
+        clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEW_lINK);
         return PageGeneratorManager.getUserMyProductPage(driver);
     }
 
     public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
-        waitForElementClickable(driver, UserBasePageUI.REWARD_POINT_LINK);
-        clickToElement(driver, UserBasePageUI.REWARD_POINT_LINK);
+        waitForElementClickable(driver, BasePageUI.REWARD_POINT_LINK);
+        clickToElement(driver, BasePageUI.REWARD_POINT_LINK);
         return PageGeneratorManager.getUserRewardPointPage(driver);
     }
 
@@ -307,6 +309,17 @@ public class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public UserHomePageObject clickToLogoutLinkAtUserPage(WebDriver driver){
+        waitForElementVisible(driver, BasePageUI.LOGOUT_LINK_AT_USER);
+        clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_USER);
+        return PageGeneratorManager.getUserHomePage(driver);
+    }
+    public AdminLoginPageObject clickToLogoutLinkAtAdminPage(WebDriver driver){
+        waitForElementVisible(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+        clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
+        return PageGeneratorManager.getAdminLoginPage(driver);
     }
 
 }

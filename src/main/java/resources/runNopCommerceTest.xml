@@ -10,7 +10,7 @@
     <test name="Run On Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testcases.user.Level_7_Switch_Page"/>
+            <class name="testcases.user.Level_8_Switch_Role"/>
         </classes>
     </test> <!-- Test -->
 
