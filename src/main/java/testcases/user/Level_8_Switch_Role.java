@@ -38,7 +38,7 @@ public class Level_8_Switch_Role extends BaseTest {
         driver.manage().window().maximize();
         firstName = "Automation";
         lastName = "FC";
-        userPassword = "123123";
+        userPassword = "123456";
         adminEmailAddress = "admin@yourstore.com";
         adminPassword = "admin";
     }

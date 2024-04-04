@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Level_7_Switch_Page extends BaseTest {
+public class Level_9_Dynamic_Xpath extends BaseTest {
     WebDriver driver;
     String emailAdress;
     String firstName, lastName, invalidEmail, notFoundEmail, validEmail, password;
@@ -47,7 +47,7 @@ public class Level_7_Switch_Page extends BaseTest {
     }
 
     @Test
-    public void Login_01_Register() {
+    public void Login_01_Register_Login_My_Account() {
         registerPage = homePage.clickToRegisterLink();
         registerPage.inputToFistnameTextbox(firstName);
         registerPage.inputToLastNameTextbox(lastName);
@@ -57,26 +57,21 @@ public class Level_7_Switch_Page extends BaseTest {
         registerPage.clickToRegisterButton();
 
         Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
-    }
 
-    @Test
-    public void Login_02_Login() {
         loginPage = homePage.clickToLoginLink();
         loginPage.inputToEmailTextBox(validEmail);
         loginPage.inputToPasswordTextBox(password);
         homePage = loginPage.clickToLoginButton();
 
         Assert.assertEquals(homePage.isMyAccountLinkDisplayed(), true);
-    }
 
-    @Test
-    public void Login_03_My_Account() {
         customerInforPage = homePage.clickToMyAccountLink();
         Assert.assertTrue(customerInforPage.isMyAccountPageDisplayed());
     }
 
+
     @Test
-    public void Login_04_Switch_Page() {
+    public void Login_02_Switch_Page() {
         addressPage = customerInforPage.openAddressPage(driver);
 
         myProductReviewPage = addressPage.openMyProductReviewPage(driver);
@@ -90,6 +85,19 @@ public class Level_7_Switch_Page extends BaseTest {
         myProductReviewPage = rewardPointPage.openMyProductReviewPage(driver);
     }
 
+    @Test
+    public void Login_03_Dynamic_Page_01() {
+
+        rewardPointPage = (UserRewardPointPageObject) addressPage.openPageAtMyAccountPageByName(driver,"Reward points");
+
+        addressPage = (UserAddressPageObject) rewardPointPage.openPageAtMyAccountPageByName(driver,"Addresses");
+
+        rewardPointPage = (UserRewardPointPageObject) addressPage.openPageAtMyAccountPageByName(driver,"Reward points");
+
+        myProductReviewPage = (UserMyProductReviewPageObject) rewardPointPage.openPageAtMyAccountPageByName(driver,"My product reviews");
+
+        customerInforPage = (UserCustomerInfoObject) myProductReviewPage.openPageAtMyAccountPageByName(driver,"Customer info");
+    }
 
 
 
