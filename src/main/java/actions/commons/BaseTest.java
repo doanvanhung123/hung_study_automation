@@ -44,7 +44,40 @@ public class BaseTest {
             throw new RuntimeException("Browser name invalid");
         }
         driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get("https://demo.nopcommerce.com/");
+        driver.get(GlobalConstants.PORTAL_PAGE_URL);
+        driver.manage().window().maximize();
+        return driver;
+    }
+
+    protected WebDriver getBrowserDriver(String browserName,String environmentName) {
+        if (browserName.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        }
+        if (browserName.equalsIgnoreCase("h_firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            options.addArguments("window-size=1920x1080");
+            driver = new FirefoxDriver(options);
+        } else if (browserName.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+
+        } else if (browserName.equalsIgnoreCase("h_chrome")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("window-size=1920x1080");
+            driver = new ChromeDriver(options);
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        } else {
+            throw new RuntimeException("Browser name invalid");
+        }
+        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        driver.get(environmentName);
         driver.manage().window().maximize();
         return driver;
     }
