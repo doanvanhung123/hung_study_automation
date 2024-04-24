@@ -264,6 +264,11 @@ public class BasePage {
         actions.moveToElement(getWebElement(driver, locator)).perform();
     }
 
+    protected void pressKeyToElement(WebDriver driver, String locator,Keys key,String ...dynamicValue) {
+        Actions actions = new Actions(driver);
+        actions.sendKeys(getWebElement(driver,locator),key).perform();
+    }
+
     protected void scrollToBottomPage(WebDriver driver) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -390,7 +395,7 @@ public class BasePage {
 
 
 
-    protected void sleepInSecond(int secondNumber) {
+    public void sleepInSecond(int secondNumber) {
         try {
             Thread.sleep(secondNumber * 1000);
         } catch (InterruptedException e) {
