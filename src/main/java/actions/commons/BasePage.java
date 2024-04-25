@@ -132,6 +132,7 @@ public class BasePage {
         return driver.findElements(getByLocator(locator));
     }
 
+
     private  String getDynamicXpath(String locatorType, String ...values){
         System.out.println("Locator Type Befor = " + locatorType);
         if(locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=")) {
@@ -213,11 +214,11 @@ public class BasePage {
         return Color.fromString(rgbaValue).asHex();
     }
 
-    protected int getElementsSize(WebDriver driver, String locator) {
+    protected int getListElementsSize(WebDriver driver, String locator) {
         return getListWebElement(driver, locator).size();
     }
 
-    protected int getElementsSize(WebDriver driver, String locator,String ...dynamicValues) {
+    protected int getListElementsSize(WebDriver driver, String locator,String ...dynamicValues) {
         return getListWebElement(driver, getDynamicXpath(locator,dynamicValues)).size();
     }
 
