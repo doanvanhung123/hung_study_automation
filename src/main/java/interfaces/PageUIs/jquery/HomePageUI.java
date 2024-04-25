@@ -13,9 +13,12 @@ public class HomePageUI extends BasePage {
     public static final String ALL_ROW_EACH_PAGE = "xpath=//tbody/tr";
     public static final String ALL_ROW_COUNTRY_EACH_PAGE = "xpath=//tbody/tr/td[@data-key='country']";
 
-    public static final String ALL_PAGE_LINK = "xpath=//a[contains(@class,'qgrd-pagination-page-link')]";
-    public static final String COLUMN_INDEX_BY_COLUMN_NAME = "xpath=//div[@class='qgrd-header-text' and text()='%S']//ancestor::th";
-    public static final String ALL_VALUE_BY_COLUMN_INDEX = "xpath=//tr/td[%s]";
+//    public static final String ALL_PAGE_LINK = "xpath=//a[contains(@class,'qgrd-pagination-page-link')]";
+//    public static final String COLUMN_INDEX_BY_COLUMN_NAME = "xpath=//div[@class='qgrd-header-text' and text()='%S']//ancestor::th";
+//    public static final String ALL_VALUE_BY_COLUMN_INDEX = "xpath=//tr/td[%s]";
+
+    public static final String COLUMN_INDEX_BY_COLUMN_NAME = "xpath=//tr/th[text()='%s']//preceding-sibling::th";
+    public static final String TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody//tr[%s]/td[%s]/input";
 
 
 }

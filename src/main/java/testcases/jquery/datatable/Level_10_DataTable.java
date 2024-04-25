@@ -57,14 +57,16 @@ public class Level_10_DataTable extends BaseTest {
 //        homePage.enterToHeaderTextboxByLabel("Total", "1350");
 //    }
 
-    @Test
-    public void Table_3_get_Cell_Value() {
-        allCountryValues = homePage.getValueEachRowAllPage();
-    }
+//    @Test
+//    public void Table_3_get_Cell_Value() {
+//        allCountryValues = homePage.getValueEachRowAllPage();
+//    }
 
     @Test
-    public void Table_5_Get_All_Column_Values() {
-        homePage.getAllColumnValuesByColumnName();
+    public void Table_5_Enter_To_Cell() {
+        homePage.enterToTextBoxAtRowNumberByColumnName("Company","1","Welch LLC");
+        homePage.enterToTextBoxAtRowNumberByColumnName("Contact Person","1","Welch LLC");
+        homePage.enterToTextBoxAtRowNumberByColumnName("Order Placed","1","Welch LLC");
     }
 
 
