@@ -1,4 +1,4 @@
-package actions.BaseObjectJquery;
+package actions.BaseObjectJquery.dataTable;
 
 
 import org.openqa.selenium.WebDriver;

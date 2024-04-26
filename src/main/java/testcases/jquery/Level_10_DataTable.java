@@ -1,18 +1,14 @@
-package testcases.jquery.datatable;
+package testcases.jquery;
 
-import actions.BaseObjectJquery.HomePageObject;
-import actions.BaseObjectJquery.PageGeneratorManager;
+import actions.BaseObjectJquery.dataTable.HomePageObject;
+import actions.BaseObjectJquery.dataTable.PageGeneratorManager;
 import actions.commons.BaseTest;
-import actions.pageObjects.user.*;
-import interfaces.PageUIs.jquery.HomePageUI;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Level_10_DataTable extends BaseTest {
     WebDriver driver;
@@ -67,6 +63,13 @@ public class Level_10_DataTable extends BaseTest {
         homePage.enterToTextBoxAtRowNumberByColumnName("Company","1","Welch LLC");
         homePage.enterToTextBoxAtRowNumberByColumnName("Contact Person","1","Welch LLC");
         homePage.enterToTextBoxAtRowNumberByColumnName("Order Placed","1","Welch LLC");
+        homePage.selectDropDownAtRowNumberByColumnName("Country","1","Germany");
+        homePage.sleepInSecond(1);
+        homePage.selectDropDownAtRowNumberByColumnName("Country","1","Hong Kong");
+        homePage.sleepInSecond(1);
+
+        homePage.checkToCheckBoxAtRowNumberByColumnName("NPO?","1");
+        homePage.sleepInSecond(1);
     }
 
 

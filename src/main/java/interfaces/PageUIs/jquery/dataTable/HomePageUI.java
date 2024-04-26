@@ -1,4 +1,4 @@
-package interfaces.PageUIs.jquery;
+package interfaces.PageUIs.jquery.dataTable;
 
 import actions.commons.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +19,8 @@ public class HomePageUI extends BasePage {
 
     public static final String COLUMN_INDEX_BY_COLUMN_NAME = "xpath=//tr/th[text()='%s']//preceding-sibling::th";
     public static final String TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody//tr[%s]/td[%s]/input";
+    public static final String DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody//tr[%s]/td[%s]//select";
+    public static final String CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX = "xpath=//tbody//tr[%s]/td[%s]//input[@type='checkbox']";
 
 
 }

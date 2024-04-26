@@ -2,6 +2,7 @@ package actions.commons;
 
 import actions.pageObjects.admin.AdminLoginPageObject;
 import actions.pageObjects.user.*;
+import interfaces.PageUIs.jquery.uploadFIle.BasePageJqueryUploadFileUI;
 import interfaces.PageUIs.user.BasePageUI;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -176,6 +177,11 @@ public class BasePage {
         select.selectByValue(itemText);
     }
 
+    protected void selectItemInDefaultDropdown(WebDriver webDriver, String locator, String itemText,String ...dynamicText) {
+        Select select = new Select(getWebElement(webDriver, getDynamicXpath(locator,dynamicText)));
+        select.selectByVisibleText(itemText);
+    }
+
     protected String getSelectedItemDefaultDropdown(WebDriver webDriver, String locator) {
         Select select = new Select(getWebElement(webDriver, locator));
         return select.getFirstSelectedOption().getText();
@@ -222,8 +228,15 @@ public class BasePage {
         return getListWebElement(driver, getDynamicXpath(locator,dynamicValues)).size();
     }
 
-    protected void checkToDefaultCheckBoxRadio(WebDriver driver, String locator) {
+    protected void checkToDefaultCheckBoxOrRadio(WebDriver driver, String locator) {
         WebElement element = getWebElement(driver, locator);
+        if (!element.isSelected()) {
+            element.click();
+        }
+    }
+
+    protected void checkToDefaultCheckBoxOrRadio(WebDriver driver, String locator,String ...dynamicValues) {
+        WebElement element = getWebElement(driver, getDynamicXpath(locator,dynamicValues));
         if (!element.isSelected()) {
             element.click();
         }
@@ -231,6 +244,13 @@ public class BasePage {
 
     protected void uncheckToDefaultCheckBoxRadio(WebDriver driver, String locator) {
         WebElement element = getWebElement(driver, locator);
+        if (element.isSelected()) {
+            element.click();
+        }
+    }
+
+    protected void uncheckToDefaultCheckBoxRadio(WebDriver driver, String locator,String dynamicValues) {
+        WebElement element = getWebElement(driver, getDynamicXpath(locator,dynamicValues));
         if (element.isSelected()) {
             element.click();
         }
@@ -340,6 +360,16 @@ public class BasePage {
     protected void waitForElementClickable(WebDriver driver, String locator,String ...dynamicValues) {
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locator,dynamicValues))));
+    }
+
+    public void uploadMultipleFiles(WebDriver driver,String ...fileNames){
+        String filePath = GlobalConstants.UPLOAD_FILE_FOLDER;
+        String fullFileName = "";
+        for (String file: fileNames){
+            fullFileName = fullFileName + filePath +file + "\n";
+        }
+        fullFileName = fullFileName.trim();
+        getWebElement(driver,getDynamicXpath(BasePageJqueryUploadFileUI.UPLOAD_FILE,fileNames)).sendKeys(fullFileName);
     }
 
     protected void waitForElementPresence(WebDriver driver, String locator) {

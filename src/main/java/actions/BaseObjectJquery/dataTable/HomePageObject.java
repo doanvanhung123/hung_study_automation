@@ -1,7 +1,7 @@
-package actions.BaseObjectJquery;
+package actions.BaseObjectJquery.dataTable;
 
 import actions.commons.BasePage;
-import interfaces.PageUIs.jquery.HomePageUI;
+import interfaces.PageUIs.jquery.dataTable.HomePageUI;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,5 +60,20 @@ public class HomePageObject extends BasePage {
         //sendkey to what row
         waitForElementVisible(driver,HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(comlumnIndex));
         sendkeyToElement(driver,HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,values,rowIndex,String.valueOf(comlumnIndex));
+    }
+
+    public void selectDropDownAtRowNumberByColumnName(String columnName, String rowIndex, String values) {
+        int comlumnIndex = getListElementsSize(driver, HomePageUI.COLUMN_INDEX_BY_COLUMN_NAME, columnName) + 1;
+
+        waitForElementClickable(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(comlumnIndex));
+        selectItemInDefaultDropdown(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,values,rowIndex,String.valueOf(comlumnIndex));
+    }
+
+    public void checkToCheckBoxAtRowNumberByColumnName(String columnName, String rowIndex) {
+
+        int comlumnIndex = getListElementsSize(driver, HomePageUI.COLUMN_INDEX_BY_COLUMN_NAME, columnName) + 1;
+
+        waitForElementClickable(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(comlumnIndex));
+        checkToDefaultCheckBoxOrRadio(driver,HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(comlumnIndex));
     }
 }
