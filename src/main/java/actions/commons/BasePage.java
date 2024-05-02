@@ -66,7 +66,7 @@ public class BasePage {
         driver.navigate().forward();
     }
 
-    protected void refreshCurrentPage(WebDriver driver) {
+    public void refreshCurrentPage(WebDriver driver) {
         driver.navigate().refresh();
     }
 
@@ -320,6 +320,11 @@ public class BasePage {
     protected boolean isImageLoaded(WebDriver driver, String locator) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         return (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \\\"undefined\\\" && arguments[0].naturalWidth > 0", getWebElement(driver, locator));
+    }
+
+    protected boolean isImageLoaded(WebDriver driver, String locator,String dynamicValue) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        return (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, getDynamicXpath(locator,dynamicValue)));
     }
 
     protected void waitForElementVisible(WebDriver driver, String locator) {
