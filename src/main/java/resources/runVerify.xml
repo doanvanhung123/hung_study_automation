@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nopcommerce">
-    <listeners>
-        <listener class-name="actions.commons.MethodListener"></listener>>
-    </listeners>
 <!--    <test name="Run On FireFox">-->
 <!--        <parameter name="browser" value="firefox"></parameter>-->
 <!--        <classes>-->
@@ -11,18 +8,11 @@
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
     <test name="Run On Chrome">
-        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="testcases.user.Level_12_Verify"/>
         </classes>
     </test> <!-- Test -->
 
-<!--    <test name="Run On Edge">-->
-<!--        <parameter name="browser" value="edge"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="testcases.user.Level_5_Page_Factory"/>-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
 
 </suite> <!-- Suite -->

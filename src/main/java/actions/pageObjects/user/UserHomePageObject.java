@@ -34,4 +34,10 @@ public class UserHomePageObject extends BasePage {
         return isElementDisplayed(driver, UserHomePageUI.MY_ACCOUNT_LINK);
     }
 
+    public UserLoginPageObject clickToLogoutLink() {
+        waitForElementClickable(driver, UserHomePageUI.LOGOUT_LINK);
+        clickToElement(driver, UserHomePageUI.LOGOUT_LINK);
+        return PageGeneratorManager.getUserLoginPagePage(driver);
+    }
+
 }
