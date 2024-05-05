@@ -264,6 +264,18 @@ public class BasePage {
         return getWebElement(driver, getDynamicXpath(locator,dynamicValues)).isDisplayed();
     }
 
+    protected boolean isElementUnDisplayed(WebDriver driver, String locator) {
+        boolean status = true;
+        if(getWebElement(driver,locator).isDisplayed()){
+            status = false;
+        }
+        return status;
+    }
+
+    protected boolean isElementUnDisplayed(WebDriver driver, String locator,String ...dynamicValues) {
+        return getWebElement(driver, getDynamicXpath(locator,dynamicValues)).isDisplayed();
+    }
+
     protected boolean isElementDEnabled(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isEnabled();
     }
@@ -365,6 +377,11 @@ public class BasePage {
     protected void waitForElementClickable(WebDriver driver, String locator,String ...dynamicValues) {
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locator,dynamicValues))));
+    }
+
+    protected void waitForElementClickable(WebDriver driver, String locator) {
+        WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+        explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
     }
 
     public void uploadMultipleFiles(WebDriver driver,String ...fileNames){
