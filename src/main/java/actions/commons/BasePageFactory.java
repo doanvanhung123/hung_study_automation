@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class BasePageFactory {
@@ -58,7 +59,11 @@ public class BasePageFactory {
     }
 
     protected boolean isElementDisplayed(WebElement element) {
-        return element.isDisplayed();
+        try{
+            return element.isDisplayed();
+        }catch (NoSuchElementException e){
+            return false;
+        }
     }
 
 
