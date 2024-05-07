@@ -25,7 +25,6 @@ public class BasePage {
 
 
     private By getByLocator(String locatorType) {
-        System.out.println("Locator type =" + locatorType);
         By by = null;
         if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
             by = By.id(locatorType.substring(3));

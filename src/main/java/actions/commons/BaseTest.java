@@ -1,6 +1,7 @@
 package actions.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,12 +11,19 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.apache.commons.logging.Log;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     protected RemoteWebDriver driver;
+
+    protected final Log log;
+
+    protected BaseTest(){
+        log = LogFactory.getLog(getClass());
+    }
     private String projectPath = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName) {
@@ -63,6 +71,7 @@ public class BaseTest {
             options.addArguments("window-size=1920x1080");
             driver = new FirefoxDriver(options);
         } else if (browserName.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "src/main/browserDrivers/chromedriver.exe" );
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
@@ -73,7 +82,7 @@ public class BaseTest {
             options.addArguments("window-size=1920x1080");
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
+//            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         } else {
             throw new RuntimeException("Browser name invalid");
@@ -93,7 +102,7 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertTrue(condition);
-            System.out.println(" -------------------------- PASSED -------------------------- ");
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
             System.out.println(" -------------------------- FAILED -------------------------- ");
             pass = false;
@@ -107,7 +116,7 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertFalse(condition);
-            System.out.println(" -------------------------- PASSED -------------------------- ");
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
             System.out.println(" -------------------------- FAILED -------------------------- ");
             pass = false;
@@ -122,7 +131,7 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertEquals(actual, expected);
-            System.out.println(" -------------------------- PASSED -------------------------- ");
+            log.info(" -------------------------- PASSED -------------------------- ");
         } catch (Throwable e) {
             pass = false;
             System.out.println(" -------------------------- FAILED -------------------------- ");

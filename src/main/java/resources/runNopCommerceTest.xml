@@ -16,7 +16,7 @@
         <parameter name="browser" value="chrome"></parameter>
 
         <classes>
-            <class name="testcases.user.Level_13_Verify_Undisplayed"/>
+            <class name="testcases.user.Level_14_Log_ReportNG"/>
         </classes>
     </test> <!-- Test -->
 
