@@ -1,7 +1,6 @@
 package actions.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +10,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -19,10 +19,10 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     protected RemoteWebDriver driver;
 
-    protected final Log log;
+    protected final Logger log;
 
     protected BaseTest(){
-        log = LogFactory.getLog(getClass());
+        log = LogManager.getLogger(getClass());
     }
     private String projectPath = System.getProperty("user.dir");
 
