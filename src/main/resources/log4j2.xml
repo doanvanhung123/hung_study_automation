@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="pattern">%d{HH:mm:ss}{GMT+7}|%2.2T|%5.5p| - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
+        <File name="LogFile" fileName="./logs/NopCommerce.txt" append="false">
+            <PatternLayout pattern="${pattern}"/>
+        </File>
+
+        <RollingFile name="RollingFile" fileName="./logs/NopCommerce.log"
+                     filePattern="./logs/NopCommerce-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+         Assuming TestNGAppender is your custom appender
+         You need to define your custom appender implementation
+        <TestNGAppender name="TestAppender">
+            <PatternLayout pattern="${pattern}" />
+        </TestNGAppender>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="testcases.user" level="ALL" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="LogFile"/>
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="TestAppender"/>
+        </Logger>
+
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
+<!--        <?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration status="WARN">-->
+<!--<Properties>-->
+<!--    <Property name="pattern">%d{HH:mm:ss}{GMT+7}|%2.2T|%5.5p| - %m%n</Property>-->
+<!--</Properties>-->
+<!--<Appenders>-->
+<!--    <Console name="Console" target="SYSTEM_OUT">-->
+<!--        <PatternLayout pattern="${pattern}"/>-->
+<!--    </Console>-->
+<!--</Appenders>-->
+<!--<Loggers>-->
+<!--    <Root level="debug" includeLocation="true">-->
+<!--        <AppenderRef ref="Console"/>-->
+<!--    </Root>-->
+<!--</Loggers>-->
+<!--</Configuration>-->

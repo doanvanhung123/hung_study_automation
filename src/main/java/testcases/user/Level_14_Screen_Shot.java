@@ -2,7 +2,10 @@ package testcases.user;
 
 import actions.commons.BaseTest;
 import actions.commons.PageGeneratorManager;
-import actions.pageObjects.user.*;
+import actions.pageObjects.user.UserCustomerInfoObject;
+import actions.pageObjects.user.UserHomePageObject;
+import actions.pageObjects.user.UserLoginPageObject;
+import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class Level_14_Log_ReportNG extends BaseTest {
+public class Level_14_Screen_Shot extends BaseTest {
     WebDriver driver;
     String emailAdress;
     String firstName, lastName, invalidEmail, notFoundEmail, validEmail, password;

@@ -12,6 +12,7 @@ public class GlobalConstants {
     public static final String DOWNLOAD_FILE_FOLDER = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles"+ File.separator;
     public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
     public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
+    public static final String REPORT_NG_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator ;
 
     //date base
     public static final String DB_DEV_URL = "32.18.252.185:9860";

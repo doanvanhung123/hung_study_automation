@@ -1,6 +1,8 @@
 package actions.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,7 +26,6 @@ public class BaseTest {
     protected BaseTest(){
         log = LogManager.getLogger(getClass());
     }
-    private String projectPath = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName) {
         if (browserName.equalsIgnoreCase("firefox")) {
@@ -139,6 +140,10 @@ public class BaseTest {
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return pass;
+    }
+
+    public WebDriver getDriverInstance(){
+        return  this.driver;
     }
 
    }

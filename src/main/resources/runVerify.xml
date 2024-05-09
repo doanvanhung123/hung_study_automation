@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nopcommerce">
+<!--    <test name="Run On FireFox">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testcases.user.Level_4_Multiple_Browser"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
+    <test name="Run On Chrome">
+        <classes>
+            <class name="testcases.user.Level_12_Verify"/>
+        </classes>
+    </test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->
