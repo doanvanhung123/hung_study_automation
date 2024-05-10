@@ -168,3 +168,233 @@
 18:33:37| 1| INFO| - Login - Step 03 : click to login button 
 18:33:37| 1| INFO| - Login - Step 04 : verify My account link is displayed
 18:33:38| 1| INFO| - Login - Step 04 : click to my account link
+10:06:52| 1| INFO| - 
+10:06:57| 1| INFO| - Register - Step 01: Navigate to Register page
+10:06:57| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:06:58| 1| INFO| - Register - Step 03 : Click to Register button
+10:06:59| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:06:59| 1| INFO| - Register - Step 05 : Click to logout link
+10:07:00| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:07:01| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc6169@mail.vn
+10:07:01| 1| INFO| - Login - Step 03 : click to login button 
+10:07:02| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:07:02| 1| INFO| - Login - Step 04 : click to my account link
+10:08:23| 1| INFO| - 
+10:08:26| 1| INFO| - Register - Step 01: Navigate to Register page
+10:08:26| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:08:27| 1| INFO| - Register - Step 03 : Click to Register button
+10:08:28| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:08:28| 1| INFO| - Register - Step 05 : Click to logout link
+10:08:29| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:08:29| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc1001@mail.vn
+10:08:30| 1| INFO| - Login - Step 03 : click to login button 
+10:08:30| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:08:30| 1| INFO| - Login - Step 04 : click to my account link
+10:09:13| 1| INFO| - 
+10:09:16| 1| INFO| - Register - Step 01: Navigate to Register page
+10:09:17| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:09:18| 1| INFO| - Register - Step 03 : Click to Register button
+10:09:19| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:09:19| 1| INFO| - Register - Step 05 : Click to logout link
+10:09:20| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:09:20| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc1784@mail.vn
+10:09:20| 1| INFO| - Login - Step 03 : click to login button 
+10:09:21| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:09:21| 1| INFO| - Login - Step 04 : click to my account link
+10:11:28| 1| INFO| - 
+10:11:32| 1| INFO| - Register - Step 01: Navigate to Register page
+10:11:32| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:11:33| 1| INFO| - Register - Step 03 : Click to Register button
+10:11:34| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:11:34| 1| INFO| - Register - Step 05 : Click to logout link
+10:11:35| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:11:35| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc8385@mail.vn
+10:11:36| 1| INFO| - Login - Step 03 : click to login button 
+10:11:36| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:11:36| 1| INFO| - Login - Step 04 : click to my account link
+10:14:01| 1| INFO| - 
+10:14:05| 1| INFO| - Register - Step 01: Navigate to Register page
+10:14:06| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:14:07| 1| INFO| - Register - Step 03 : Click to Register button
+10:14:07| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:14:07| 1| INFO| - Register - Step 05 : Click to logout link
+10:14:08| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:14:09| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc267@mail.vn
+10:14:09| 1| INFO| - Login - Step 03 : click to login button 
+10:14:10| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:14:10| 1| INFO| - Login - Step 04 : click to my account link
+10:19:54| 1| INFO| - 
+10:19:58| 1| INFO| - Register - Step 01: Navigate to Register page
+10:19:58| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:20:00| 1| INFO| - Register - Step 03 : Click to Register button
+10:20:00| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:20:00| 1| INFO| - Register - Step 05 : Click to logout link
+10:20:01| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:20:02| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc3385@mail.vn
+10:20:02| 1| INFO| - Login - Step 03 : click to login button 
+10:20:03| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:20:03| 1| INFO| - Login - Step 04 : click to my account link
+10:25:50| 1| INFO| - 
+10:25:54| 1| INFO| - Register - Step 01: Navigate to Register page
+10:25:55| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:25:55| 1| INFO| - Register - Step 03 : Click to Register button
+10:25:56| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:25:56| 1| INFO| - Register - Step 05 : Click to logout link
+10:25:58| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:25:58| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc4569@mail.vn
+10:25:58| 1| INFO| - Login - Step 03 : click to login button 
+10:25:59| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:25:59| 1| INFO| - Login - Step 04 : click to my account link
+10:49:00| 1| INFO| - 
+10:49:07| 1| INFO| - Register - Step 01: Navigate to Register page
+10:49:08| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:49:08| 1| INFO| - Register - Step 03 : Click to Register button
+10:49:09| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:49:09| 1| INFO| - Register - Step 05 : Click to logout link
+10:49:10| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:49:11| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc7449@mail.vn
+10:49:11| 1| INFO| - Login - Step 03 : click to login button 
+10:49:12| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:49:12| 1| INFO| - Login - Step 04 : click to my account link
+10:50:47| 1| INFO| - 
+10:50:50| 1| INFO| - Register - Step 01: Navigate to Register page
+10:50:51| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+10:50:52| 1| INFO| - Register - Step 03 : Click to Register button
+10:50:52| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+10:50:52| 1| INFO| - Register - Step 05 : Click to logout link
+10:50:53| 1| INFO| - Login - Step 01 : Navigate to Login page
+10:50:54| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc4867@mail.vn
+10:50:54| 1| INFO| - Login - Step 03 : click to login button 
+10:50:54| 1| INFO| - Login - Step 04 : verify My account link is displayed
+10:50:55| 1| INFO| - Login - Step 04 : click to my account link
+11:46:32| 1| INFO| - 
+11:46:37| 1| INFO| - Register - Step 01: Navigate to Register page
+11:46:37| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+11:46:38| 1| INFO| - Register - Step 03 : Click to Register button
+11:46:39| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+12:54:18| 1| INFO| - 
+12:54:24| 1| INFO| - Register - Step 01: Navigate to Register page
+12:54:25| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+12:54:25| 1| INFO| - Register - Step 03 : Click to Register button
+12:54:26| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+12:54:26| 1| INFO| - Login - Step 01 : Navigate to Login page
+12:58:31| 1| INFO| - 
+12:58:35| 1| INFO| - Register - Step 01: Navigate to Register page
+12:58:35| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+12:58:36| 1| INFO| - Register - Step 03 : Click to Register button
+12:58:37| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:00:28| 1| INFO| - 
+13:00:32| 1| INFO| - Register - Step 01: Navigate to Register page
+13:00:32| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:00:33| 1| INFO| - Register - Step 03 : Click to Register button
+13:00:34| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:00:34| 1| INFO| - Login - Step 0 : Click to logout link
+13:00:34| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:00:35| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc624@mail.vn
+13:00:36| 1| INFO| - Login - Step 03 : click to login button 
+13:00:37| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:06:02| 1| INFO| - 
+13:06:06| 1| INFO| - Register - Step 01: Navigate to Register page
+13:06:06| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:06:07| 1| INFO| - Register - Step 03 : Click to Register button
+13:06:07| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:06:08| 1| INFO| - Login - Step 0 : Click to logout link
+13:06:08| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:06:09| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc7965@mail.vn
+13:06:09| 1| INFO| - Login - Step 03 : click to login button 
+13:06:10| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:15:24| 1| INFO| - 
+13:15:28| 1| INFO| - Register - Step 01: Navigate to Register page
+13:15:29| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:15:30| 1| INFO| - Register - Step 03 : Click to Register button
+13:15:30| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:15:30| 1| INFO| - Login - Step 0 : Click to logout link
+13:15:31| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:15:31| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc4349@mail.vn
+13:15:32| 1| INFO| - Login - Step 03 : click to login button 
+13:15:33| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:20:51| 1| INFO| - 
+13:20:55| 1| INFO| - Register - Step 01: Navigate to Register page
+13:20:56| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:20:57| 1| INFO| - Register - Step 03 : Click to Register button
+13:20:58| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:20:58| 1| INFO| - Login - Step 0 : Click to logout link
+13:20:58| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:20:59| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc2721@mail.vn
+13:20:59| 1| INFO| - Login - Step 03 : click to login button 
+13:21:00| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:23:23| 1| INFO| - 
+13:23:32| 1| INFO| - Register - Step 01: Navigate to Register page
+13:23:33| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:23:34| 1| INFO| - Register - Step 03 : Click to Register button
+13:23:34| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:23:34| 1| INFO| - Login - Step 0 : Click to logout link
+13:23:35| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:23:36| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc7370@mail.vn
+13:23:36| 1| INFO| - Login - Step 03 : click to login button 
+13:23:37| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:25:10| 1| INFO| - 
+13:25:14| 1| INFO| - Register - Step 01: Navigate to Register page
+13:25:14| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:25:15| 1| INFO| - Register - Step 03 : Click to Register button
+13:25:16| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:25:16| 1| INFO| - Login - Step 0 : Click to logout link
+13:25:16| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:25:17| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc1391@mail.vn
+13:25:18| 1| INFO| - Login - Step 03 : click to login button 
+13:25:18| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:27:57| 1| INFO| - 
+13:28:01| 1| INFO| - Register - Step 01: Navigate to Register page
+13:28:01| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:28:02| 1| INFO| - Register - Step 03 : Click to Register button
+13:28:03| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:28:03| 1| INFO| - Login - Step 0 : Click to logout link
+13:28:04| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:28:04| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc8380@mail.vn
+13:28:05| 1| INFO| - Login - Step 03 : click to login button 
+13:28:05| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:45:13| 1| INFO| - 
+13:45:17| 1| INFO| - Register - Step 01: Navigate to Register page
+13:45:18| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:45:18| 1| INFO| - Register - Step 03 : Click to Register button
+13:45:19| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:10:13| 1| INFO| - 
+14:10:17| 1| INFO| - Register - Step 01: Navigate to Register page
+14:10:17| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:10:18| 1| INFO| - Register - Step 03 : Click to Register button
+14:10:19| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:17:45| 1| INFO| - 
+14:17:49| 1| INFO| - Register - Step 01: Navigate to Register page
+14:17:50| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:17:51| 1| INFO| - Register - Step 03 : Click to Register button
+14:17:51| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:24:08| 1| INFO| - 
+14:24:12| 1| INFO| - Register - Step 01: Navigate to Register page
+14:24:12| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:24:13| 1| INFO| - Register - Step 03 : Click to Register button
+14:24:14| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:25:29| 1| INFO| - 
+14:25:33| 1| INFO| - Register - Step 01: Navigate to Register page
+14:25:34| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:25:34| 1| INFO| - Register - Step 03 : Click to Register button
+14:25:35| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:26:46| 1| INFO| - 
+14:26:51| 1| INFO| - Register - Step 01: Navigate to Register page
+14:26:52| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:26:54| 1| INFO| - Register - Step 03 : Click to Register button
+14:26:54| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:33:16| 1| INFO| - 
+14:33:20| 1| INFO| - Register - Step 01: Navigate to Register page
+14:33:21| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:33:22| 1| INFO| - Register - Step 03 : Click to Register button
+14:33:23| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:43:28| 1| INFO| - 
+14:43:32| 1| INFO| - Register - Step 01: Navigate to Register page
+14:43:33| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:43:34| 1| INFO| - Register - Step 03 : Click to Register button
+14:43:35| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+14:44:17| 1| INFO| - 
+14:44:21| 1| INFO| - Register - Step 01: Navigate to Register page
+14:44:22| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:44:23| 1| INFO| - Register - Step 03 : Click to Register button
+14:44:24| 1| INFO| - Register - Step 04 : Verify register success message is displayed

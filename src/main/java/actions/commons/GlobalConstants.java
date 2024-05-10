@@ -13,6 +13,7 @@ public class GlobalConstants {
     public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
     public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
     public static final String REPORT_NG_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator ;
+    public static final String EXTENT_PATH = PROJECT_PATH + File.separator + "extentV2" + File.separator ;
 
     //date base
     public static final String DB_DEV_URL = "32.18.252.185:9860";
@@ -22,5 +23,6 @@ public class GlobalConstants {
     public static final int SHORT_TIMEOUT = 5;
     public static final long LONG_TIMEOUT = 10;
     public static final long RETRY_TEST_FAIL = 3;
+    public static final String JAVA_VERSION = System.getProperty("java.version");
 
 }

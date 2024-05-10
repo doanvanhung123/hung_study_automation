@@ -47,7 +47,7 @@ public class ReportNGListener implements ITestListener {
 
         String screenshotPath = captureScreenshot(webDriver, result.getName());
         Reporter.getCurrentTestResult();
-        Reporter.log("<br><a target=\\\"_blank\\\" href=\\\"file:///\" + screenshotPath + \"\\\">\" + \"<img src=\\\"file:///\" + screenshotPath + \"\\\" \" + \"height='100' width='150'/> \" + \"</a></br>");
+        Reporter.log("<br><a target=\"_blank\" href=\"file:///" + screenshotPath + "\">" + "<img src=\"file:///" + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
         Reporter.setCurrentTestResult(null);
     }
 

@@ -1,11 +1,5 @@
-18:33:29| 1| INFO| - 
-18:33:32| 1| INFO| - Register - Step 01: Navigate to Register page
-18:33:33| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
-18:33:34| 1| INFO| - Register - Step 03 : Click to Register button
-18:33:35| 1| INFO| - Register - Step 04 : Verify register success message is displayed
-18:33:35| 1| INFO| - Register - Step 05 : Click to logout link
-18:33:36| 1| INFO| - Login - Step 01 : Navigate to Login page
-18:33:36| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc2221@mail.vn
-18:33:37| 1| INFO| - Login - Step 03 : click to login button 
-18:33:37| 1| INFO| - Login - Step 04 : verify My account link is displayed
-18:33:38| 1| INFO| - Login - Step 04 : click to my account link
+14:44:17| 1| INFO| - 
+14:44:21| 1| INFO| - Register - Step 01: Navigate to Register page
+14:44:22| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+14:44:23| 1| INFO| - Register - Step 03 : Click to Register button
+14:44:24| 1| INFO| - Register - Step 04 : Verify register success message is displayed

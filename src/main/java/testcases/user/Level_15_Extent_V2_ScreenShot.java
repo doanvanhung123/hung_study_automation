@@ -13,9 +13,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
-public class Level_14_Screen_Shot extends BaseTest {
+public class Level_15_Extent_V2_ScreenShot extends BaseTest {
     WebDriver driver;
     String emailAdress;
     String firstName, lastName, invalidEmail, notFoundEmail, validEmail, password;
@@ -46,7 +47,7 @@ public class Level_14_Screen_Shot extends BaseTest {
     }
 
     @Test
-    public void Login_01_Register_Login_My_Account() {
+    public void Login_01_Register_Login_My_Account(Method method) {
         log.info("Register - Step 01: Navigate to Register page");
         registerPage = homePage.clickToRegisterLink();
         log.info("Register - Step 02 : Enter to Firtname textbox with value is" + firstName);
