@@ -6,6 +6,8 @@ import actions.pageObjects.user.UserCustomerInfoObject;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
+import actions.reportConfig.ExtentTestManager;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -29,7 +31,6 @@ public class Level_16_Extent_V3 extends BaseTest {
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(String browserName) {
-        log.info("");
         driver = getBrowserDriver(browserName);
         homePage = PageGeneratorManager.getUserHomePage(driver);
         emailAdress = "afc" + generateFakeNumber() + "@mail.vn";
@@ -42,12 +43,12 @@ public class Level_16_Extent_V3 extends BaseTest {
         validEmail = emailAdress;
         notFoundEmail = "afc" + generateFakeNumber() + "@mail.vn";
         password = "123456";
-
-
     }
 
     @Test
     public void Login_01_Register_Login_My_Account(Method method) {
+        ExtentTestManager.startTest(method.getName(),"Register to system with valid Email and process");
+        ExtentTestManager.getTest().log(Status.INFO, "Register - Step 01: Navigate to 'Register' page");
         log.info("Register - Step 01: Navigate to Register page");
         registerPage = homePage.clickToRegisterLink();
         log.info("Register - Step 02 : Enter to Firtname textbox with value is" + firstName);
@@ -65,8 +66,8 @@ public class Level_16_Extent_V3 extends BaseTest {
     }
 
     @Test
-    public void Login_02_Login() {
-
+    public void Login_02_Login(Method method) {
+        ExtentTestManager.startTest(method.getName(),"Register to system with valid Email and process");
         log.info("Login - Step 0 : Click to logout link");
         homePage.clickToLogoutLink();
         log.info("Login - Step 01 : Navigate to Login page");

@@ -3,6 +3,7 @@ package actions.pageObjects.user;
 import actions.commons.BasePage;
 import actions.commons.PageGeneratorManager;
 import interfaces.PageUIs.user.UserHomePageUI;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 public class UserHomePageObject extends BasePage {
@@ -11,6 +12,7 @@ public class UserHomePageObject extends BasePage {
         this.driver = driver;
     }
 
+    @Step("Navigate to Register page")
     public UserRegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver, UserHomePageUI.REGISTER_LINK);
         clickToElement(driver, UserHomePageUI.REGISTER_LINK);
@@ -23,12 +25,13 @@ public class UserHomePageObject extends BasePage {
         return PageGeneratorManager.getUserCustomerInfor(driver);
     }
 
+    @Step("Navigate to login page")
     public UserLoginPageObject clickToLoginLink() {
         waitForElementClickable(driver, UserHomePageUI.LOGIN_LINK);
         clickToElement(driver, UserHomePageUI.LOGIN_LINK);
         return PageGeneratorManager.getUserLoginPagePage(driver);
     }
-
+    @Step ("Verify my account link displayed")
     public boolean isMyAccountLinkDisplayed() {
         waitForElementVisible(driver, UserHomePageUI.MY_ACCOUNT_LINK);
         return isElementDisplayed(driver, UserHomePageUI.MY_ACCOUNT_LINK);

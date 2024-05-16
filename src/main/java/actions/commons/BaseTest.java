@@ -1,8 +1,6 @@
 package actions.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,7 +12,9 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -22,9 +22,30 @@ public class BaseTest {
     protected RemoteWebDriver driver;
 
     protected final Logger log;
+    @BeforeSuite
+    public void initBeforSuite(){
+        deleteAllAllureReport();
+    }
 
     protected BaseTest(){
         log = LogManager.getLogger(getClass());
+    }
+    @BeforeSuite
+    public void deleteAllAllureReport() {
+        try {
+            String pathFolderDownload = GlobalConstants.PROJECT_PATH + File.separator + "allure-json";
+            File file = new File(pathFolderDownload);
+            File[] listOfFiles = file.listFiles();
+            if (listOfFiles.length != 0) {
+                for (int i = 0; i < listOfFiles.length; i++) {
+                    if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+                        new File(listOfFiles[i].toString()).delete();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
     }
 
     protected WebDriver getBrowserDriver(String browserName) {
