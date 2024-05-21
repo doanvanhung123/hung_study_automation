@@ -2,13 +2,14 @@ package actions.reportConfig;
 
 import actions.commons.GlobalConstants;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.annotations.Test;
 
 public class ExtentManager {
     public static final ExtentReports extentReports = new ExtentReports();
-
-    public static ExtentReports createExtentReports() {
+    public synchronized static ExtentReports createExtentReports() {
         ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstants.PROJECT_PATH + "/extentV5/ExtentReport.html");
         reporter.config().setReportName("NopCommerce HTML Report");
         reporter.config().setDocumentTitle("NopCommerce HTML Report");

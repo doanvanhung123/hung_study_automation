@@ -61,17 +61,23 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.2</version>
+            <version>5.0.9</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.27.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
         </dependency>
 
 

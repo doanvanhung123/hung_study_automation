@@ -3,6 +3,7 @@ package actions.reportConfig;
 import actions.commons.BaseTest;
 import actions.commons.GlobalConstants;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -13,26 +14,29 @@ import org.testng.ITestResult;
 import io.qameta.allure.Attachment;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.util.UUID;
+    import java.lang.reflect.Method;
 
 public class AllureTestListener implements ITestListener {
 
     private static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
+        Method method = iTestResult.getMethod().getConstructorOrMethod().getMethod();
+        if (method.isAnnotationPresent(Step.class)) {
+            Step step = method.getAnnotation(Step.class);
+            return step.value();
+        }
+        return iTestResult.getMethod().getMethodName();
     }
 
     // Screenshot attachments for Allure
     @Attachment(value = "Screenshot of {0}", type = "image/png")
     public static void saveScreenshotPNG(String testName, WebDriver driver) {
         Allure.addAttachment(testName, new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-//        return (byte[]) ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     // Text attachments for Allure
     @Attachment(value = "Text attachment of {0}", type = "text/plain")
-    public static String saveTextLog(String message) {
-        return message;
+    public static void saveTextLog(String message) {
+        Allure.addAttachment(message, "");
     }
 
     // HTML attachments for Allure
@@ -46,7 +50,7 @@ public class AllureTestListener implements ITestListener {
         Object testClass = iTestResult.getInstance();
         WebDriver driver = ((BaseTest) testClass).getDriverInstance();
         saveScreenshotPNG(iTestResult.getName(), driver);
-        saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
+//        saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
     }
 
     @Override
@@ -77,8 +81,8 @@ public class AllureTestListener implements ITestListener {
     }
 
     @Override
-    public void onTestSuccess(ITestResult arg0) {
-        // TODO Auto-generated method stub
+    public void onTestSuccess(ITestResult iTestResult) {
+        saveTextLog(getTestMethodName(iTestResult) + " passed!");
     }
 
 

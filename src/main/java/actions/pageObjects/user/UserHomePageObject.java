@@ -11,13 +11,13 @@ public class UserHomePageObject extends BasePage {
     public UserHomePageObject(WebDriver driver){
         this.driver = driver;
     }
-
     @Step("Navigate to Register page")
     public UserRegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver, UserHomePageUI.REGISTER_LINK);
         clickToElement(driver, UserHomePageUI.REGISTER_LINK);
         return PageGeneratorManager.getUserRegisterPage(driver);
     }
+
 
     public UserCustomerInfoObject clickToMyAccountLink() {
         waitForElementClickable(driver, UserHomePageUI.MY_ACCOUNT_LINK);

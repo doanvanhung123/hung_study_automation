@@ -164,7 +164,7 @@ public class BaseTest {
     }
 
     public WebDriver getDriverInstance(){
-        return  this.driver;
+        return this.driver;
     }
 
    }
