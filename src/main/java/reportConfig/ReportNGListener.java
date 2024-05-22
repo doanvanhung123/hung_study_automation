@@ -1,4 +1,4 @@
-package actions.reportConfig;
+package reportConfig;
 
 import actions.commons.BaseTest;
 import actions.commons.GlobalConstants;

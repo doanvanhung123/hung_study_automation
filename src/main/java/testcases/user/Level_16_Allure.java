@@ -6,7 +6,6 @@ import actions.pageObjects.user.UserCustomerInfoObject;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
-import actions.reportConfig.AllureTestListener;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;

@@ -486,5 +486,15 @@ public class BasePage {
         clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
+    public Set<Cookie> getAllCookies(WebDriver driver){
+        return driver.manage().getCookies();
+    }
+
+    public void setCookies(WebDriver driver,Set<Cookie> cookies){
+        for (Cookie cookie:cookies){
+            driver.manage().addCookie(cookie);
+        }
+        sleepInSecond(3);
+    }
 
 }

@@ -2,7 +2,7 @@
 <suite name="Nopcommerce">
     <listeners>
         <listener class-name="actions.commons.MethodListener"></listener>>
-        <listener class-name="reportConfig.ExtentTestListener"></listener>>
+        <listener class-name="reportConfig.ReportNGListener"></listener>>
 <!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
 <!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
     </listeners>
@@ -18,7 +18,8 @@
     <test name="Run On Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testcases.user.Level_16_Extent_V3"/>
+            <class name="testcases.common.Register_New_Account_Cookie"/>
+            <class name="testcases.user.Level_16_Share_Data_C"/>
         </classes>
     </test> <!-- Test -->
 

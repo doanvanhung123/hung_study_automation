@@ -12,6 +12,6 @@
             <testcase
                 name="createExtentReports"
                 time="0.405"
-                classname="actions.reportConfig.ExtentManager">
+                classname="reportConfig.ExtentManager">
             </testcase>
 </testsuite>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.033">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Search_03_Absolute_Product_Name"
+                time="0.002"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+            <testcase
+                name="Search_05_Incorrect_Manufactorer"
+                time="0.001"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+            <testcase
+                name="Search_01_Empty_Data"
+                time="0.025"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+            <testcase
+                name="Search_02_Relative_Product_Name"
+                time="0.003"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+            <testcase
+                name="Search_04_Parent_Category"
+                time="0.001"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+            <testcase
+                name="Search_06_Correct_Manufactorer"
+                time="0.001"
+                classname="testcases.user.Level_16_Share_Data_A">
+            </testcase>
+</testsuite>

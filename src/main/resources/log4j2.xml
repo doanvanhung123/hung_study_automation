@@ -29,7 +29,7 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="testcases.user" level="ALL" additivity="false">
+        <Logger name="testcases" level="ALL" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="LogFile"/>
             <AppenderRef ref="RollingFile"/>

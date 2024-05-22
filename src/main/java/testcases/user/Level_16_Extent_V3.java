@@ -6,7 +6,7 @@ import actions.pageObjects.user.UserCustomerInfoObject;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
-import actions.reportConfig.ExtentTestManager;
+import reportConfig.ExtentTestManager;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

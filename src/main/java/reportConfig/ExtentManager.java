@@ -1,4 +1,4 @@
-package actions.reportConfig;
+package reportConfig;
 
 import actions.commons.GlobalConstants;
 import com.aventstack.extentreports.ExtentReports;

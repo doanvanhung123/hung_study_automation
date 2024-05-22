@@ -1,7 +1,7 @@
-package actions.reportConfig;
+package reportConfig;
 
 import org.testng.ITestContext;
-import static actions.reportConfig.ExtentTestManager.getTest;
+import static reportConfig.ExtentTestManager.getTest;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
