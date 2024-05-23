@@ -334,6 +334,7 @@ public class BasePage {
         jsExecutor.executeScript("arguments[0].click();", getWebElement(driver, locator));
     }
 
+
     protected void scrollToElementByJS(WebDriver driver, String locator) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, locator));
@@ -496,5 +497,9 @@ public class BasePage {
         }
         sleepInSecond(3);
     }
-
+    //Patten object
+    public void inputToTextBoxByID(WebDriver driver,String textBoxID,String value) {
+        waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textBoxID);
+        sendkeyToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,value,textBoxID);
+    }
 }
