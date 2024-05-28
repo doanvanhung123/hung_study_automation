@@ -18,8 +18,7 @@
     <test name="Run On Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testcases.common.Register_New_Account_Cookie"/>
-            <class name="testcases.user.Level_16_Share_Data_C"/>
+            <class name="testcases.user.Level_18_Patten_Object"/>
         </classes>
     </test> <!-- Test -->
 

@@ -213,6 +213,10 @@ public class BasePage {
         return getWebElement(driver, locator).getAttribute(attributeName);
     }
 
+    protected String getElementAttribute(WebDriver driver, String locator, String attributeName,String... dynamicXpath) {
+        return getWebElement(driver, getDynamicXpath(locator,dynamicXpath)).getAttribute(attributeName);
+    }
+
     protected String getElementCssValue(WebDriver driver, String locator, String propertyName) {
         return getWebElement(driver, locator).getCssValue(propertyName);
     }
@@ -501,5 +505,30 @@ public class BasePage {
     public void inputToTextBoxByID(WebDriver driver,String textBoxID,String value) {
         waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textBoxID);
         sendkeyToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,value,textBoxID);
+    }
+
+    public void clickToButtonByText(WebDriver driver,String textBoxID) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT,textBoxID);
+        clickToElement(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT,textBoxID);
+    }
+
+    public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME,dropdownAttributeName);
+        selectItemInDefaultDropdown(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME,itemValue,dropdownAttributeName);
+    }
+
+    public void clickToRadioButtonByLabel(WebDriver driver, String radioLabel) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_RADIO_BY_LABEL,radioLabel);
+        checkToDefaultCheckBoxOrRadio(driver,BasePageUI.DYNAMIC_RADIO_BY_LABEL,radioLabel);
+    }
+
+    public void clickToCheckBoxByLabel(WebDriver driver, String checkboxLabel) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL,checkboxLabel);
+        clickToElement(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL,checkboxLabel);
+    }
+
+    public String getTextboxValueByID(WebDriver driver, String textboxID) {
+        waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
+        return getElementAttribute(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,"value",textboxID);
     }
 }
