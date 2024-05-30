@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -52,6 +52,8 @@ public class BaseTest {
     protected WebDriver getBrowserDriver(String browserName) {
         if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
+            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,GlobalConstants.PROJECT_PATH + "firefoxLog.txt");
             driver = new FirefoxDriver();
         }
         if (browserName.equalsIgnoreCase("h_firefox")) {
@@ -61,8 +63,24 @@ public class BaseTest {
             options.addArguments("window-size=1920x1080");
             driver = new FirefoxDriver(options);
         } else if (browserName.equalsIgnoreCase("chrome")) {
+//            File file = new File(GlobalConstants.PROJECT_PATH + "\\file.crx");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--lang=vn");
+            options.setExperimentalOption("useAutomationExtension",false);
+            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+
+            Map<String,Object> prefs = new HashMap<String,Object>();
+            prefs.put("credentials_enable_service",false);
+            prefs.put("profile.password_manager_enabled",false);
+            options.setExperimentalOption("prefs",prefs);
+            prefs.put("profile.default_content_setting.popups",0);
+            prefs.put("download.default_directory",GlobalConstants.DOWNLOAD_FILE_FOLDER);
+            options.setExperimentalOption("prefs",prefs);
+//            options.addExtensions(file);
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+//            driver = new ChromeDriver(options);
+
+            driver = new ChromeDriver(options);
 
         } else if (browserName.equalsIgnoreCase("h_chrome")) {
             WebDriverManager.chromedriver().setup();
