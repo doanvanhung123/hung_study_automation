@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.007">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Search_02_2"
+                time="0.002"
+                classname="testcases.testng.Test_02">
+            </testcase>
+            <testcase
+                name="Search_02_3"
+                time="0.003"
+                classname="testcases.testng.Test_02">
+            </testcase>
+            <testcase
+                name="Search_02_1"
+                time="0.002"
+                classname="testcases.testng.Test_02">
+            </testcase>
+</testsuite>
