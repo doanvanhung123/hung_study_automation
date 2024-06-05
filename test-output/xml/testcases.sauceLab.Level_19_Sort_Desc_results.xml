@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.927">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Sort_02_Price"
+                time="0.393"
+                classname="testcases.sauceLab.Level_19_Sort_Desc">
+            </testcase>
+            <testcase
+                name="Sort_01_Name"
+                time="6.534"
+                classname="testcases.sauceLab.Level_19_Sort_Desc">
+            </testcase>
+</testsuite>

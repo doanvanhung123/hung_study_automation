@@ -175,7 +175,7 @@ public class BasePage {
 
     protected void selectItemInDefaultDropdown(WebDriver webDriver, String locator, String itemText) {
         Select select = new Select(getWebElement(webDriver, locator));
-        select.selectByValue(itemText);
+        select.selectByVisibleText(itemText);
     }
 
     protected void selectItemInDefaultDropdown(WebDriver webDriver, String locator, String itemText, String... dynamicText) {

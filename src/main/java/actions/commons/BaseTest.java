@@ -23,14 +23,16 @@ public class BaseTest {
     protected RemoteWebDriver driver;
 
     protected final Logger log;
+
     @BeforeSuite
-    public void initBeforSuite(){
+    public void initBeforSuite() {
         deleteAllAllureReport();
     }
 
-    protected BaseTest(){
+    protected BaseTest() {
         log = LogManager.getLogger(getClass());
     }
+
     @BeforeSuite
     public void deleteAllAllureReport() {
         try {
@@ -52,8 +54,8 @@ public class BaseTest {
     protected WebDriver getBrowserDriver(String browserName) {
         if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
-            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,GlobalConstants.PROJECT_PATH + "firefoxLog.txt");
+            System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "firefoxLog.txt");
             driver = new FirefoxDriver();
         }
         if (browserName.equalsIgnoreCase("h_firefox")) {
@@ -66,16 +68,16 @@ public class BaseTest {
 //            File file = new File(GlobalConstants.PROJECT_PATH + "\\file.crx");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--lang=vn");
-            options.setExperimentalOption("useAutomationExtension",false);
+            options.setExperimentalOption("useAutomationExtension", false);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
-            Map<String,Object> prefs = new HashMap<String,Object>();
-            prefs.put("credentials_enable_service",false);
-            prefs.put("profile.password_manager_enabled",false);
-            options.setExperimentalOption("prefs",prefs);
-            prefs.put("profile.default_content_setting.popups",0);
-            prefs.put("download.default_directory",GlobalConstants.DOWNLOAD_FILE_FOLDER);
-            options.setExperimentalOption("prefs",prefs);
+            Map<String, Object> prefs = new HashMap<String, Object>();
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
+            options.setExperimentalOption("prefs", prefs);
+            prefs.put("profile.default_content_setting.popups", 0);
+            prefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FILE_FOLDER);
+            options.setExperimentalOption("prefs", prefs);
 //            options.addExtensions(file);
             WebDriverManager.chromedriver().setup();
 //            driver = new ChromeDriver(options);
@@ -100,7 +102,7 @@ public class BaseTest {
         return driver;
     }
 
-    protected WebDriver getBrowserDriver(String browserName,String environmentName) {
+    protected WebDriver getBrowserDriver(String browserName, String environmentName) {
         if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -112,7 +114,7 @@ public class BaseTest {
             options.addArguments("window-size=1920x1080");
             driver = new FirefoxDriver(options);
         } else if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "src/main/browserDrivers/chromedriver.exe" );
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "src/main/browserDrivers/chromedriver.exe");
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
 
@@ -231,8 +233,17 @@ public class BaseTest {
         return pass;
     }
 
-    public WebDriver getDriverInstance(){
+    public WebDriver getDriverInstance() {
         return this.driver;
     }
 
-   }
+    public void sleepInSecond(int time) {
+        try {
+            Thread.sleep(time *1000);
+        }catch (Exception e){
+
+        }
+
+    }
+
+}
