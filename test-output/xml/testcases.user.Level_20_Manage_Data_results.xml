@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.570">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Login_01_Register_Login_My_Account"
+                time="4.737"
+                classname="testcases.user.Level_20_Manage_Data">
+            </testcase>
+            <testcase
+                name="Login_02_Login"
+                time="3.833"
+                classname="testcases.user.Level_20_Manage_Data">
+            </testcase>
+</testsuite>

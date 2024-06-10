@@ -136,12 +136,12 @@ public class BasePage {
 
 
     private String getDynamicXpath(String locatorType, String... values) {
-        System.out.println("Locator Type Befor = " + locatorType);
+//        System.out.println("Locator Type Before = " + locatorType);
         if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=")) {
             locatorType = String.format(locatorType, (Object[]) values);
         }
-        System.out.println("Value map to locator = " + values.toString());
-        System.out.println("Locator Type After = " + locatorType);
+//        System.out.println("Value map to locator = " + values.toString());
+//        System.out.println("Locator Type After = " + locatorType);
         return locatorType;
     }
 

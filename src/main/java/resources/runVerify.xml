@@ -9,7 +9,7 @@
 
     <test name="Run On Chrome">
         <classes>
-            <class name="testcases.user.Level_12_Verify"/>
+            <class name="user.Level_12_Verify"/>
         </classes>
     </test> <!-- Test -->
 

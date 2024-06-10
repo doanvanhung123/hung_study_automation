@@ -7,11 +7,14 @@ public class GlobalConstants {
     public static final String PORTAL_PAGE_URL = "https://demo.nopcommerce.com";
     public static final String ADMIN_PAGE_URL = "https://admin-demo.nopcommerce.com";
     public static final String PROJECT_PATH = System.getProperty("user.dir");
+
+    public static final String RESOURCE_FOLDER = PROJECT_PATH + File.separator + "src" + File.separator + "test" + File.separator + "resources";
+
     public static final String OS_NAME = System.getProperty("os.name");
     public static final String UPLOAD_FILE_FOLDER = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "uploadFiles"+ File.separator;
     public static final String DOWNLOAD_FILE_FOLDER = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles" ;
-    public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
-    public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "downloadFiles";
+    public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "downloadFiles";
+    public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "downloadFiles";
     public static final String REPORT_NG_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator ;
     public static final String EXTENT_PATH = PROJECT_PATH + File.separator + "extentV2" + File.separator ;
 

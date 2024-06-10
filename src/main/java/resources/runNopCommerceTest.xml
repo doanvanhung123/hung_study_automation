@@ -18,7 +18,7 @@
         <parameter name="browser" value="chrome"></parameter>
 
         <classes>
-            <class name="testcases.user.Level_14_Log_ReportNG"/>
+            <class name="user.Level_14_Log_ReportNG"/>
         </classes>
     </test> <!-- Test -->
 

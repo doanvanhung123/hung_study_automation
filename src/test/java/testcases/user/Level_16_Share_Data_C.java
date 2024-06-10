@@ -2,8 +2,11 @@ package testcases.user;
 
 import actions.commons.BaseTest;
 import actions.commons.PageGeneratorManager;
+import actions.pageObjects.user.UserCustomerInfoObject;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
+import testcases.common.Register_New_Account_Cookie;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,12 +14,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testcases.common.Register_New_Account_EndUser;
 
-public class Level_16_Share_Data_A extends BaseTest {
+public class Level_16_Share_Data_C extends BaseTest {
     WebDriver driver;
     String emailAdress,password;
     UserHomePageObject homePage;
     UserLoginPageObject loginPage;
 
+    UserCustomerInfoObject customerInforPage;
 
     @Parameters("browser")
     @BeforeClass
@@ -31,13 +35,15 @@ public class Level_16_Share_Data_A extends BaseTest {
         log.info("Login - Step 01 : Navigate to Login page");
         loginPage = homePage.clickToLoginLink();
 
-        log.info("Login - Step 02 : Enter to Email Text box with value is " + emailAdress);
+        log.info("Login - Step 02 : Set cookie and reload page" + emailAdress);
+        loginPage.setCookies(driver, Register_New_Account_Cookie.loggedCookies);
+        for (Cookie cookie:Register_New_Account_Cookie.loggedCookies){
+            System.out.println(cookie);
+        }
+        loginPage.refreshCurrentPage(driver);
 
-        loginPage.inputToEmailTextBox(emailAdress);
-        loginPage.inputToPasswordTextBox(password);
-
-        log.info("Login - Step 03 : click to login button ");
-        homePage = loginPage.clickToLoginButton();
+        log.info("Login - Step 03 : Verify is my account displayed");
+        verifyTrue(customerInforPage.isMyAccountPageDisplayed());
 
     }
 

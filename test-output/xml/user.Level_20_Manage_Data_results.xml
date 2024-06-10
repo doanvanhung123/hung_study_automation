@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.927">
+           time="6.048">
     <properties></properties>
 
 
 
             <testcase
-                name="Sort_02_Price"
-                time="0.393"
-                classname="sauceLab.Level_19_Sort_Desc">
+                name="Login_01_Register_Login_My_Account"
+                time="2.892"
+                classname="user.Level_20_Manage_Data">
             </testcase>
             <testcase
-                name="Sort_01_Name"
-                time="6.534"
-                classname="sauceLab.Level_19_Sort_Desc">
+                name="Login_02_Login"
+                time="3.156"
+                classname="user.Level_20_Manage_Data">
             </testcase>
 </testsuite>

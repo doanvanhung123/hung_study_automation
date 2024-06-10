@@ -12,16 +12,16 @@
             <testcase
                 name="Search_02_2"
                 time="0.002"
-                classname="testcases.testng.Test_02">
+                classname="testng.Test_02">
             </testcase>
             <testcase
                 name="Search_02_3"
                 time="0.003"
-                classname="testcases.testng.Test_02">
+                classname="testng.Test_02">
             </testcase>
             <testcase
                 name="Search_02_1"
                 time="0.002"
-                classname="testcases.testng.Test_02">
+                classname="testng.Test_02">
             </testcase>
 </testsuite>

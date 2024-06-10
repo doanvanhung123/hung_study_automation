@@ -11,7 +11,7 @@
         <parameter name="url" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/"></parameter>
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="testcases.jquery.Level_10_DataTable"/>
+            <class name="jquery.Level_10_DataTable"/>
         </classes>
     </test> <!-- Test -->
 
