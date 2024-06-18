@@ -1,4 +1,4 @@
-package testdata.nopcommerce;
+package nopcommerce;
 
 public class UserData {
     public static final String FIRSt_NAME = "Automation";

@@ -135,6 +135,21 @@ public class BaseTest {
         driver.manage().window().maximize();
         return driver;
     }
+    protected String getEnvironmentUrl(String environmentName) {
+       String Url = null;
+        EnvironmentList env = EnvironmentList.valueOf(environmentName.toUpperCase());
+        if(env== EnvironmentList.DEV){
+            return "https://demo.nopcommerce.com";
+        }else if(env== EnvironmentList.TESTING){
+            return "https://demo.nopcommerce.com";
+        }else if(env== EnvironmentList.STAGING){
+            return "https://demo.nopcommerce.com";
+        }else if(env== EnvironmentList.PRODUCTION){
+            return "https://demo.nopcommerce.com";
+        }
+        return null;
+    }
+
 
     protected void closeBrowserDriver() {
         String cmd = null;

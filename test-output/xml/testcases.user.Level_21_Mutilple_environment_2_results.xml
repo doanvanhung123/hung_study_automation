@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="4"
+           failures="2"
+           errors="0"
+           skipped="2"
+           time="1.771">
+    <properties></properties>
+
+            <testcase
+                name="afterClass"
+                time="0.001"
+                classname="testcases.user.Level_21_Mutilple_environment_2">
+
+            <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
+                <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+                testcases.user.Level_21_Mutilple_environment_2.afterClass(Level_21_Mutilple_environment_2.java:138)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </failure>
+    </testcase>
+            <testcase
+                name="beforeClass"
+                time="1.770"
+                classname="testcases.user.Level_21_Mutilple_environment_2">
+
+            <failure type="org.openqa.selenium.WebDriverException" message="unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=125.0.6422.142)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HUNGDOANV&apos;, ip: &apos;172.31.22.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\HUNG~1.DOA\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60770}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7388eb20169fc6624239da4d6bfcac06">
+                <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=125.0.6422.142)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HUNGDOANV', ip: '172.31.22.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\HUNG~1.DOA\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60770}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7388eb20169fc6624239da4d6bfcac06
+                java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)actions.commons.BaseTest.getBrowserDriver(BaseTest.java:134)testcases.user.Level_21_Mutilple_environment_2.beforeClass(Level_21_Mutilple_environment_2.java:34)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </failure>
+    </testcase>
+
+            <testcase
+                name="Login_02_Login"
+                time="0.0"
+                classname="testcases.user.Level_21_Mutilple_environment_2">
+            </testcase>
+            <testcase
+                name="Login_01_Register_Login_My_Account"
+                time="0.0"
+                classname="testcases.user.Level_21_Mutilple_environment_2">
+            </testcase>
+
+</testsuite>

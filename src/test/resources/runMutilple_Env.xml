@@ -2,23 +2,22 @@
 <suite name="Nopcommerce">
     <listeners>
         <listener class-name="actions.commons.MethodListener"></listener>>
-        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+<!--        <listener class-name="reportConfig.ExtentTestListener"></listener>>-->
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
     </listeners>
 
-    <parameter name="url" value="https://www.facebook.com/"></parameter>
 <!--    <test name="Run On FireFox">-->
 <!--        <parameter name="browser" value="firefox"></parameter>-->
 <!--        <classes>-->
 <!--            <class name="testcases.user.Level_4_Multiple_Browser"/>-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-
+    <parameter name="environment" value="dev"></parameter>
     <test name="Run On Chrome">
         <parameter name="browser" value="chrome"></parameter>
-
         <classes>
-            <class name="user.Level_14_Log_ReportNG"/>
+            <class name="testcases.user.Level_21_Mutilple_environment"/>
         </classes>
     </test> <!-- Test -->
 

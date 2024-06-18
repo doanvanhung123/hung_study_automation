@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nopcommerce">
+    <listeners>
+        <listener class-name="actions.commons.MethodListener"></listener>>
+<!--        <listener class-name="reportConfig.ExtentTestListener"></listener>>-->
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+    </listeners>
+
 <!--    <test name="Run On FireFox">-->
 <!--        <parameter name="browser" value="firefox"></parameter>-->
 <!--        <classes>-->
 <!--            <class name="testcases.user.Level_4_Multiple_Browser"/>-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-
+    <parameter name="environment" value="test"></parameter>
     <test name="Run On Chrome">
-        <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"></parameter>
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="jquery.Level_11_Upload_File"/>
+            <class name="testcases.user.Level_21_Mutilple_environment_2"/>
         </classes>
     </test> <!-- Test -->
 

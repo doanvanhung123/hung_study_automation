@@ -17,3 +17,42 @@
 17:17:55| 1| INFO| - Login - Step 03 : click to login button 
 17:17:56| 1| INFO| - Login - Step 04 : verify My account link is displayed
 17:17:56| 1| INFO| -  -------------------------- PASSED -------------------------- 
+17:46:58| 1| INFO| - Test log
+17:47:03| 1| INFO| - Register - Step 01: Navigate to Register page
+17:47:04| 1| INFO| - Register - Step 01: Select gender
+17:47:04| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+17:47:04| 1| INFO| - Register - Step 02 : Enter to lastName textbox with value isAutomation
+17:47:05| 1| INFO| - Register - Step 02 : Enter to Email textbox with value isAutomation
+17:47:05| 1| INFO| - Register - Step 01: Select checkbox
+17:47:05| 1| INFO| - Register - Step 02 : Enter to Password textbox with value isAutomation
+17:47:05| 1| INFO| - Register - Step 02 : Enter to Confirm Password textbox with value isAutomation
+17:47:05| 1| INFO| - Register - Step 03 : Click to Register button
+17:47:06| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+17:47:06| 1| INFO| -  -------------------------- PASSED -------------------------- 
+17:47:06| 1| INFO| - Register - Step 05 : Click to logout link
+17:47:07| 1| INFO| - Login - Step 01 : Navigate to Login page
+17:47:08| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is automation3629@mail.vn
+17:47:08| 1| INFO| - Login - Step 02 : Enter to Password Text box with value is 132456
+17:47:09| 1| INFO| - Login - Step 03 : click to login button 
+17:47:09| 1| INFO| - Login - Step 04 : verify My account link is displayed
+17:47:09| 1| INFO| -  -------------------------- PASSED -------------------------- 
+11:22:15| 1| INFO| - Test log
+11:22:20| 1| INFO| - Register - Step 01: Navigate to Register page
+11:22:21| 1| INFO| - Register - Step 01: Select gender
+11:22:21| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+11:22:21| 1| INFO| - Register - Step 02 : Enter to lastName textbox with value isAutomation
+11:22:22| 1| INFO| - Register - Step 02 : Enter to Email textbox with value isAutomation
+11:22:22| 1| INFO| - Register - Step 01: Select checkbox
+11:22:22| 1| INFO| - Register - Step 02 : Enter to Password textbox with value isAutomation
+11:22:22| 1| INFO| - Register - Step 02 : Enter to Confirm Password textbox with value isAutomation
+11:22:22| 1| INFO| - Register - Step 03 : Click to Register button
+11:22:23| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+11:22:23| 1| INFO| -  -------------------------- PASSED -------------------------- 
+11:22:23| 1| INFO| - Register - Step 05 : Click to logout link
+11:22:24| 1| INFO| - Login - Step 01 : Navigate to Login page
+11:22:24| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is automation3557@mail.vn
+11:22:24| 1| INFO| - Login - Step 02 : Enter to Password Text box with value is 132456
+11:22:25| 1| INFO| - Login - Step 03 : click to login button 
+11:22:25| 1| INFO| - Login - Step 04 : verify My account link is displayed
+11:22:25| 1| INFO| -  -------------------------- PASSED -------------------------- 
+11:34:14| 1| INFO| - Test log

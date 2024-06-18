@@ -1,20 +1,22 @@
 package testcases.user;
 
 import actions.commons.BaseTest;
+import actions.commons.EnvironmentList;
 import actions.commons.PageGeneratorManager;
 import actions.pageObjects.user.UserCustomerInfoObject;
 import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
+import actions.utilities.Environment;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testdata.UserDataMapper;
-//import testdata.nopcommerce.UserData;
 
-public class Level_20_Manage_Data extends BaseTest {
+public class Level_21_Mutilple_environment_2 extends BaseTest {
     UserDataMapper userData;
     WebDriver driver;
     String emailAdress;
@@ -22,13 +24,14 @@ public class Level_20_Manage_Data extends BaseTest {
     UserHomePageObject homePage;
     UserRegisterPageObject registerPage;
     UserLoginPageObject loginPage;
-    UserCustomerInfoObject customerInforPage;
-
-    @Parameters("browser")
+    Environment env;
+    @Parameters({"browser","environment"})
     @BeforeClass
-    public void beforeClass(String browserName) {
+    public void beforeClass(String browserName,String environmentName) {
+        ConfigFactory.setProperty("env",environmentName);
+        env = ConfigFactory.create(Environment.class);
         log.info("Test log");
-        driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName,env.appUrl());
         homePage = PageGeneratorManager.getUserHomePage(driver);
         userData = UserDataMapper.getUserData();
 //        emailAdress = UserData.EMAIL + generateFakeNumber() + "@mail.vn";

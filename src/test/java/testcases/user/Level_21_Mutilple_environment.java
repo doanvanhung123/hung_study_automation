@@ -12,9 +12,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import testdata.UserDataMapper;
-//import testdata.nopcommerce.UserData;
 
-public class Level_20_Manage_Data extends BaseTest {
+public class Level_21_Mutilple_environment extends BaseTest {
     UserDataMapper userData;
     WebDriver driver;
     String emailAdress;
@@ -24,11 +23,11 @@ public class Level_20_Manage_Data extends BaseTest {
     UserLoginPageObject loginPage;
     UserCustomerInfoObject customerInforPage;
 
-    @Parameters("browser")
+    @Parameters({"browser","environment"})
     @BeforeClass
-    public void beforeClass(String browserName) {
+    public void beforeClass(String browserName,String environment) {
         log.info("Test log");
-        driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName,environment);
         homePage = PageGeneratorManager.getUserHomePage(driver);
         userData = UserDataMapper.getUserData();
 //        emailAdress = UserData.EMAIL + generateFakeNumber() + "@mail.vn";
