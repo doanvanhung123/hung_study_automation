@@ -28,4 +28,9 @@ public class GlobalConstants {
     public static final long RETRY_TEST_FAIL = 3;
     public static final String JAVA_VERSION = System.getProperty("java.version");
 
+    public static final String BROWSER_USERNAME = "oauth-doanvanhungcntt-23c16";
+    public static final String BROWSER_AUTOMATE_KEY = "27175a45-9d6f-4943-8d80-4e40ae514a65";
+//    public static final String BROWSER_SOURCE_LAB_URL = "https://" + BROWSER_USERNAME+ ":"+BROWSER_AUTOMATE_KEY+"@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
+    public static final String BROWSER_SOURCE_LAB_URL = "https://oauth-doanvanhungcntt-23c16:27175a45-9d6f-4943-8d80-4e40ae514a65@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
+
 }

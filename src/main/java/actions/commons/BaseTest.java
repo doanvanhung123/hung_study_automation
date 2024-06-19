@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -16,6 +17,8 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -135,6 +138,42 @@ public class BaseTest {
         driver.manage().window().maximize();
         return driver;
     }
+    protected WebDriver getBrowserDriverBrowserStack(String browserName, String environmentName,String osName,String osVersion) {
+        DesiredCapabilities capabitity = new DesiredCapabilities();
+        capabitity.setCapability("os",osName);
+        capabitity.setCapability("os_version",osVersion);
+        capabitity.setCapability("browser",browserName);
+        capabitity.setCapability("browser_version","lasted");
+        capabitity.setCapability("browser_version","lasted");
+        capabitity.setCapability("browserstack.debug","true");
+        capabitity.setCapability("resolution","1920x1080");
+        capabitity.setCapability("name","Run on" + osName + "and" + browserName + "with version lasted");
+
+        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        driver.get(environmentName);
+        driver.manage().window().maximize();
+        return driver;
+    }
+    protected WebDriver getBrowserDriverSourceLab(String browserName, String environmentName,String osName) {
+        DesiredCapabilities capabitity = new DesiredCapabilities();
+        capabitity.setCapability("platformName",osName);
+        capabitity.setCapability("browserName",browserName);
+        capabitity.setCapability("browserVersion","latest");
+        capabitity.setCapability("name","Run on" + osName + "and" + browserName + "with version lasted");
+        Map<String, Object> sauceOptions = new HashMap<>();
+        sauceOptions.put("screenResolution","1920x1080");
+        capabitity.setCapability("souce:options",sauceOptions);
+        try{
+            driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_SOURCE_LAB_URL),capabitity);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        driver.get(getEnvironmentUrl(environmentName));
+        driver.manage().window().maximize();
+        return driver;
+    }
+
     protected String getEnvironmentUrl(String environmentName) {
        String Url = null;
         EnvironmentList env = EnvironmentList.valueOf(environmentName.toUpperCase());
