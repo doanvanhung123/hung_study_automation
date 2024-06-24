@@ -10,9 +10,11 @@ import org.testng.annotations.*;
 public class Level_10_Verify_Assert extends BaseTest {
     WebDriver driver;
 
-    @BeforeTest
-    public void beforeClass() {
-        driver = getBrowserDriver("chrome","https://www.facebook.com/");
+    @Parameters({"browser","url","env"})
+    @BeforeClass
+    public void beforeClass(@Optional("chrome") String browserName,@Optional("dev") String url,@Optional("local") String env,@Optional("localHost") String ipAddress,@Optional("4444") String portNumber
+            ,@Optional("Windows 10") String osName,@Optional("latest") String osVersion) {
+        driver = getBrowserDriver(browserName,url,env,ipAddress,portNumber,osName,osVersion);
     }
 
     @Test

@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="48.184">
+           time="48.074">
     <properties></properties>
 
 
 
             <testcase
                 name="Login_02_Login"
-                time="14.313"
+                time="13.496"
                 classname="testcases.cloud.Level_22_clound">
             </testcase>
             <testcase
                 name="Login_01_Register_Login_My_Account"
-                time="33.871"
+                time="34.578"
                 classname="testcases.cloud.Level_22_clound">
             </testcase>
 </testsuite>

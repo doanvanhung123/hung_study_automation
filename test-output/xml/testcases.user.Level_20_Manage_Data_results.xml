@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.570">
+           time="6.054">
     <properties></properties>
 
 
 
             <testcase
                 name="Login_01_Register_Login_My_Account"
-                time="4.737"
+                time="3.314"
                 classname="testcases.user.Level_20_Manage_Data">
             </testcase>
             <testcase
                 name="Login_02_Login"
-                time="3.833"
+                time="2.740"
                 classname="testcases.user.Level_20_Manage_Data">
             </testcase>
 </testsuite>

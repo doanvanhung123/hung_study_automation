@@ -125,8 +125,6 @@ public class Level_20_Manage_Data extends BaseTest {
 //        Assert.assertEquals(lastName,customerInforPage.getTextboxValueByID(driver,"LastName"));
 //
 //        Assert.assertEquals(emailAdress,customerInforPage.getTextboxValueByID(driver,"Email"));
-//
-//
 //    }
 
 

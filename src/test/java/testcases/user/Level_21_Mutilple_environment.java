@@ -7,10 +7,7 @@ import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import testdata.UserDataMapper;
 
 public class Level_21_Mutilple_environment extends BaseTest {
@@ -23,11 +20,11 @@ public class Level_21_Mutilple_environment extends BaseTest {
     UserLoginPageObject loginPage;
     UserCustomerInfoObject customerInforPage;
 
-    @Parameters({"browser","environment"})
+    @Parameters({"browser","url","env"})
     @BeforeClass
-    public void beforeClass(String browserName,String environment) {
-        log.info("Test log");
-        driver = getBrowserDriver(browserName,environment);
+    public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String url, @Optional("local") String env, @Optional("localHost") String ipAddress, @Optional("4444") String portNumber
+            , @Optional("Windows 10") String osName, @Optional("latest") String osVersion) {
+        driver = getBrowserDriver(browserName,url,env,ipAddress,portNumber,osName,osVersion);
         homePage = PageGeneratorManager.getUserHomePage(driver);
         userData = UserDataMapper.getUserData();
 //        emailAdress = UserData.EMAIL + generateFakeNumber() + "@mail.vn";

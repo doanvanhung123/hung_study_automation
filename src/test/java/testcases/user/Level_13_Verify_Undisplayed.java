@@ -15,11 +15,11 @@ public class Level_13_Verify_Undisplayed extends BaseTest {
     WebDriver driver;
     LoginPageObject loginPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeClass
     public void beforeClass(String browserName, String url) {
 
-        driver = getBrowserDriver(browserName, url);
+        driver = getBrowserDriver(browserName);
         loginPage = PageGeneratorManager.getLoginPage(driver);
 
     }

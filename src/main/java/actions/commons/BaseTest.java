@@ -1,5 +1,9 @@
 package actions.commons;
 
+import actions.FactoryEnvironment.EnvironmentList;
+import actions.FactoryEnvironment.GridFactory;
+import actions.FactoryEnvironment.LocalFactory;
+import actions.FactoryEnvironment.SouceLabFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +27,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    protected RemoteWebDriver driver;
+    protected WebDriver driver;
 
     protected final Logger log;
 
@@ -105,36 +109,26 @@ public class BaseTest {
         return driver;
     }
 
-    protected WebDriver getBrowserDriver(String browserName, String environmentName) {
-        if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
-        if (browserName.equalsIgnoreCase("h_firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("--headless");
-            options.addArguments("window-size=1920x1080");
-            driver = new FirefoxDriver(options);
-        } else if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "src/main/browserDrivers/chromedriver.exe");
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-
-        } else if (browserName.equalsIgnoreCase("h_chrome")) {
-            WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless");
-            options.addArguments("window-size=1920x1080");
-            driver = new ChromeDriver(options);
-        } else if (browserName.equalsIgnoreCase("edge")) {
-//            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        } else {
-            throw new RuntimeException("Browser name invalid");
+    protected WebDriver getBrowserDriver(String browserName,String appUrl, String environmentName,String ipAdress,String portNumber,String osName,String osVersion) {
+        switch (environmentName){
+            case "local":
+                driver = new LocalFactory(browserName).createDriver();
+                break;
+            case "grid":
+                driver = new GridFactory(browserName,ipAdress,portNumber).createDriver();
+                break;
+            case "browserStack":
+                driver = new LocalFactory(browserName).createDriver();
+                break;
+            case "soucelab":
+                driver = new SouceLabFactory(browserName,"Windows 10").createDriver();
+                break;
+            default:
+                driver = new LocalFactory(browserName).createDriver();
+                break;
         }
         driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get(environmentName);
+        driver.get(getEnvironmentUrl(appUrl));
         driver.manage().window().maximize();
         return driver;
     }
