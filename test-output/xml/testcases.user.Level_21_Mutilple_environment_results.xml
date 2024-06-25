@@ -4,43 +4,39 @@
            failures="2"
            errors="0"
            skipped="2"
-           time="-1718338901.809">
+           time="0.007">
     <properties></properties>
 
             <testcase
+                name="beforeClass"
+                time="0.005"
+                classname="testcases.user.Level_21_Mutilple_environment">
+
+            <failure type="java.lang.IllegalArgumentException" message="wrong number of arguments">
+                <![CDATA[java.lang.IllegalArgumentException: wrong number of arguments
+                java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </failure>
+    </testcase>
+            <testcase
                 name="afterClass"
-                time="0.001"
+                time="0.002"
                 classname="testcases.user.Level_21_Mutilple_environment">
 
             <failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null">
                 <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
-                testcases.user.Level_21_Mutilple_environment.afterClass(Level_21_Mutilple_environment.java:134)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </failure>
-    </testcase>
-            <testcase
-                name="beforeClass"
-                time="-1718338901.810"
-                classname="testcases.user.Level_21_Mutilple_environment">
-
-            <failure type="org.testng.TestNGException" message="
-Parameter &apos;environment&apos; is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in D:\hoc_auto_thay_dam_2\src\test\resources\runMutilple_Env_owner.xml">
-                <![CDATA[org.testng.TestNGException: 
-Parameter 'environment' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in D:\hoc_auto_thay_dam_2\src\test\resources\runMutilple_Env_owner.xml
-                org.testng.internal.Parameters.createParams(Parameters.java:272)org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)org.testng.internal.Parameters.createParameters(Parameters.java:704)org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:283)org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+                testcases.user.Level_21_Mutilple_environment.afterClass(Level_21_Mutilple_environment.java:131)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 ]]>
             </failure>
     </testcase>
 
             <testcase
-                name="Login_02_Login"
+                name="Login_01_Register_Login_My_Account"
                 time="0.0"
                 classname="testcases.user.Level_21_Mutilple_environment">
             </testcase>
             <testcase
-                name="Login_01_Register_Login_My_Account"
+                name="Login_02_Login"
                 time="0.0"
                 classname="testcases.user.Level_21_Mutilple_environment">
             </testcase>

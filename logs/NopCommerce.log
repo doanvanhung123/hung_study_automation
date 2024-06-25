@@ -118,3 +118,61 @@
 14:58:46| 1| INFO| - Login - Step 03 : click to login button 
 14:58:47| 1| INFO| - Login - Step 04 : verify My account link is displayed
 14:58:47| 1| INFO| -  -------------------------- PASSED -------------------------- 
+13:54:07| 1| INFO| - Test log
+13:54:14| 1| INFO| - Register - Step 01: Navigate to Register page
+13:54:15| 1| INFO| - Register - Step 01: Select gender
+13:54:15| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+13:54:15| 1| INFO| - Register - Step 02 : Enter to lastName textbox with value isAutomation
+13:54:16| 1| INFO| - Register - Step 02 : Enter to Email textbox with value isAutomation
+13:54:16| 1| INFO| - Register - Step 01: Select checkbox
+13:54:16| 1| INFO| - Register - Step 02 : Enter to Password textbox with value isAutomation
+13:54:17| 1| INFO| - Register - Step 02 : Enter to Confirm Password textbox with value isAutomation
+13:54:17| 1| INFO| - Register - Step 03 : Click to Register button
+13:54:17| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+13:54:17| 1| INFO| -  -------------------------- PASSED -------------------------- 
+13:54:17| 1| INFO| - Register - Step 05 : Click to logout link
+13:54:18| 1| INFO| - Login - Step 01 : Navigate to Login page
+13:54:19| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is automation3094@mail.vn
+13:54:19| 1| INFO| - Login - Step 02 : Enter to Password Text box with value is 132456
+13:54:19| 1| INFO| - Login - Step 03 : click to login button 
+13:54:20| 1| INFO| - Login - Step 04 : verify My account link is displayed
+13:54:20| 1| INFO| -  -------------------------- PASSED -------------------------- 
+14:50:36|19| INFO| - before class successfully
+14:50:37|18| INFO| - before class successfully
+14:50:44|19| INFO| - after class successfully
+14:50:44|18| INFO| - after class successfully
+14:53:51|18| INFO| - before class successfully
+14:54:04|18| INFO| - before class successfully
+14:54:11|18| INFO| - after class successfully
+14:59:26|18| INFO| - before class successfully
+14:59:34|18| INFO| - after class successfully
+15:00:01|18| INFO| - before class successfully
+15:00:01|19| INFO| - before class successfully
+15:00:08|18| INFO| - after class successfully
+15:00:08|19| INFO| - after class successfully
+15:00:58|18| INFO| - before class successfully
+15:01:05|18| INFO| - after class successfully
+15:01:07|27| INFO| - before class successfully
+15:01:14|27| INFO| - after class successfully
+15:40:47|18| INFO| - before class successfully
+15:40:54|18| INFO| - after class successfully
+15:40:56|27| INFO| - before class successfully
+15:46:31|18| INFO| - before class successfully
+15:46:39|18| INFO| - after class successfully
+15:46:41|27| INFO| - before class successfully
+15:46:49|27| INFO| - after class successfully
+17:34:21|18| INFO| - before class successfully
+17:34:29|18| INFO| - after class successfully
+17:34:32|27| INFO| - before class successfully
+17:34:46|19| INFO| - before class successfully
+17:34:46|18| INFO| - before class successfully
+17:34:54|19| INFO| - after class successfully
+17:34:54|18| INFO| - after class successfully
+17:49:17|19| INFO| - before class successfully
+17:49:17|18| INFO| - before class successfully
+17:49:24|19| INFO| - OS name = windows 10
+17:49:24|19| INFO| - Driver instance name = chromedriver: chrome on windows (9306247138239cb20d8521660d7c6d05)
+17:49:24|18| INFO| - OS name = windows 10
+17:49:24|18| INFO| - Driver instance name = chromedriver: chrome on windows (db527049cec1254e84b41655c7c9cc01)
+17:49:25|19| INFO| - after class successfully
+17:49:25|18| INFO| - after class successfully

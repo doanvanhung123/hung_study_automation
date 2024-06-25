@@ -7,10 +7,7 @@ import actions.pageObjects.user.UserHomePageObject;
 import actions.pageObjects.user.UserLoginPageObject;
 import actions.pageObjects.user.UserRegisterPageObject;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import testdata.UserDataMapper;
 
 public class Level_22_clound extends BaseTest {
@@ -23,11 +20,10 @@ public class Level_22_clound extends BaseTest {
     UserLoginPageObject loginPage;
     UserCustomerInfoObject customerInforPage;
 
-    @Parameters({"browser","environment","osName"})
+    @Parameters({"browser","url","env","ipAddress","portNumber","osName","osVersion"})
     @BeforeClass
-    public void beforeClass(String browserName,String environment,String osName) {
-        log.info("Test log");
-        driver = getBrowserDriverSourceLab(browserName,environment,osName);
+    public void beforeClass(@Optional("chrome") String browserName, @Optional("dev") String url, @Optional("soucelab") String env, @Optional("localHost") String ipAddress, @Optional("4444") String portNumber,
+                            @Optional("Windows 10") String osName, @Optional("latest") String osVersion) {
         homePage = PageGeneratorManager.getUserHomePage(driver);
         userData = UserDataMapper.getUserData();
 //        emailAdress = UserData.EMAIL + generateFakeNumber() + "@mail.vn";

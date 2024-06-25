@@ -133,6 +133,6 @@ public class Level_21_Mutilple_environment_2 extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        closeBrowserDriver();
     }
 }

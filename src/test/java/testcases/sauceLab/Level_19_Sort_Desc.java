@@ -15,16 +15,19 @@ public class Level_19_Sort_Desc extends BaseTest {
     ProductPageObject productPageObject;
 
 
-    @Parameters({"browser","url","env"})
+    @Parameters({"browser","url","env","ipAddress","portNumber","osName","osVersion"})
     @BeforeClass
-    public void beforeClass(@Optional("chrome") String browserName,@Optional("dev") String url,@Optional("local") String env,@Optional("localHost") String ipAddress,@Optional("4444") String portNumber
-        ,@Optional("Windows 10") String osName,@Optional("latest") String osVersion) {
+    public void beforeClass(@Optional("chrome") String browserName,@Optional("dev") String url,@Optional("local") String env,@Optional("localHost") String ipAddress,@Optional("4444") String portNumber,
+        @Optional("Windows 10") String osName,@Optional("latest") String osVersion) {
         driver = getBrowserDriver(browserName,url,env,ipAddress,portNumber,osName,osVersion);
         loginPage = PageGeneratorManager.getLoginPageObject(driver);
 
         loginPage.enterToUserNameTextbox("standard_user");
         loginPage.enterToPasswordTextbox("secret_sauce");
         productPageObject = loginPage.clickLoginButton();
+        log.info("before class successfully");
+        System.out.println(String.format("Luồng: %s có độ ưu tiên %d -id %d \n",Thread.currentThread().getName(),Thread.currentThread().getPriority(),Thread.currentThread().getId()));
+
     }
 
     @Test
@@ -55,6 +58,8 @@ public class Level_19_Sort_Desc extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-//        driver.quit();
+        closeBrowserDriver();
+        log.info("after class successfully");
+
     }
 }

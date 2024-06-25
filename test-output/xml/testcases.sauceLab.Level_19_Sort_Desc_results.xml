@@ -1,33 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run On Chrome"
-           tests="3"
-           failures="1"
+           tests="2"
+           failures="0"
            errors="0"
-           skipped="2"
-           time="0.004">
+           skipped="0"
+           time="6.613">
     <properties></properties>
 
-            <testcase
-                name="beforeClass"
-                time="0.004"
-                classname="testcases.sauceLab.Level_19_Sort_Desc">
 
-            <failure type="java.lang.IllegalArgumentException" message="wrong number of arguments">
-                <![CDATA[java.lang.IllegalArgumentException: wrong number of arguments
-                java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)java.base/java.lang.reflect.Method.invoke(Method.java:568)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)java.base/java.util.ArrayList.forEach(ArrayList.java:1511)org.testng.TestRunner.privateRun(TestRunner.java:766)org.testng.TestRunner.run(TestRunner.java:587)org.testng.SuiteRunner.runTest(SuiteRunner.java:384)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)org.testng.SuiteRunner.run(SuiteRunner.java:286)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)org.testng.TestNG.runSuitesLocally(TestNG.java:1109)org.testng.TestNG.runSuites(TestNG.java:1039)org.testng.TestNG.run(TestNG.java:1007)com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </failure>
-    </testcase>
 
-            <testcase
-                name="Sort_01_Name"
-                time="0.0"
-                classname="testcases.sauceLab.Level_19_Sort_Desc">
-            </testcase>
             <testcase
                 name="Sort_02_Price"
-                time="0.0"
+                time="0.263"
                 classname="testcases.sauceLab.Level_19_Sort_Desc">
             </testcase>
-
+            <testcase
+                name="Sort_01_Name"
+                time="6.350"
+                classname="testcases.sauceLab.Level_19_Sort_Desc">
+            </testcase>
 </testsuite>

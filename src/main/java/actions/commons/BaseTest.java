@@ -27,7 +27,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    protected WebDriver driver;
+    protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     protected final Logger log;
 
@@ -63,14 +63,14 @@ public class BaseTest {
             WebDriverManager.firefoxdriver().setup();
             System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
             System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "firefoxLog.txt");
-            driver = new FirefoxDriver();
+            driver.set(new FirefoxDriver());
         }
         if (browserName.equalsIgnoreCase("h_firefox")) {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--headless");
             options.addArguments("window-size=1920x1080");
-            driver = new FirefoxDriver(options);
+            driver.set(new FirefoxDriver());
         } else if (browserName.equalsIgnoreCase("chrome")) {
 //            File file = new File(GlobalConstants.PROJECT_PATH + "\\file.crx");
             ChromeOptions options = new ChromeOptions();
@@ -89,87 +89,56 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
 //            driver = new ChromeDriver(options);
 
-            driver = new ChromeDriver(options);
+            driver.set(new ChromeDriver());
 
         } else if (browserName.equalsIgnoreCase("h_chrome")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
             options.addArguments("window-size=1920x1080");
-            driver = new ChromeDriver(options);
+            driver.set(new ChromeDriver());
         } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
+            driver.set(new EdgeDriver());
         } else {
             throw new RuntimeException("Browser name invalid");
         }
-        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get(GlobalConstants.PORTAL_PAGE_URL);
-        driver.manage().window().maximize();
-        return driver;
+        driver.get().manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        driver.get().get(GlobalConstants.PORTAL_PAGE_URL);
+        driver.get().manage().window().maximize();
+        return driver.get();
     }
 
     protected WebDriver getBrowserDriver(String browserName,String appUrl, String environmentName,String ipAdress,String portNumber,String osName,String osVersion) {
         switch (environmentName){
             case "local":
-                driver = new LocalFactory(browserName).createDriver();
+                driver.set(new LocalFactory(browserName).createDriver());
                 break;
             case "grid":
-                driver = new GridFactory(browserName,ipAdress,portNumber).createDriver();
+                driver.set(new GridFactory(browserName,ipAdress,portNumber).createDriver());
                 break;
             case "browserStack":
-                driver = new LocalFactory(browserName).createDriver();
+                driver.set(new LocalFactory(browserName).createDriver());
                 break;
             case "soucelab":
-                driver = new SouceLabFactory(browserName,"Windows 10").createDriver();
+                driver.set(new SouceLabFactory(browserName,"Windows 10").createDriver());
                 break;
             default:
-                driver = new LocalFactory(browserName).createDriver();
+                driver.set(new LocalFactory(browserName).createDriver());
                 break;
         }
-        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get(getEnvironmentUrl(appUrl));
-        driver.manage().window().maximize();
-        return driver;
-    }
-    protected WebDriver getBrowserDriverBrowserStack(String browserName, String environmentName,String osName,String osVersion) {
-        DesiredCapabilities capabitity = new DesiredCapabilities();
-        capabitity.setCapability("os",osName);
-        capabitity.setCapability("os_version",osVersion);
-        capabitity.setCapability("browser",browserName);
-        capabitity.setCapability("browser_version","lasted");
-        capabitity.setCapability("browser_version","lasted");
-        capabitity.setCapability("browserstack.debug","true");
-        capabitity.setCapability("resolution","1920x1080");
-        capabitity.setCapability("name","Run on" + osName + "and" + browserName + "with version lasted");
-
-        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get(environmentName);
-        driver.manage().window().maximize();
-        return driver;
-    }
-    protected WebDriver getBrowserDriverSourceLab(String browserName, String environmentName,String osName) {
-        DesiredCapabilities capabitity = new DesiredCapabilities();
-        capabitity.setCapability("platformName",osName);
-        capabitity.setCapability("browserName",browserName);
-        capabitity.setCapability("browserVersion","latest");
-        capabitity.setCapability("name","Run on" + osName + "and" + browserName + "with version lasted");
-        Map<String, Object> sauceOptions = new HashMap<>();
-        sauceOptions.put("screenResolution","1920x1080");
-        capabitity.setCapability("souce:options",sauceOptions);
-        try{
-            driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_SOURCE_LAB_URL),capabitity);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+        driver.get().manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        if(appUrl!="dev") {
+            driver.get().get(appUrl);
+        }else {
+            driver.get().get(getEnvironmentUrl(appUrl));
         }
-        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.get(getEnvironmentUrl(environmentName));
-        driver.manage().window().maximize();
-        return driver;
+
+        driver.get().manage().window().maximize();
+        return driver.get();
     }
 
     protected String getEnvironmentUrl(String environmentName) {
-       String Url = null;
         EnvironmentList env = EnvironmentList.valueOf(environmentName.toUpperCase());
         if(env== EnvironmentList.DEV){
             return "https://demo.nopcommerce.com";
@@ -190,7 +159,7 @@ public class BaseTest {
             String osName = System.getProperty("os.name").toLowerCase();
             log.info("OS name = " + osName);
 
-            String driverInstanceName = driver.toString().toLowerCase();
+            String driverInstanceName = driver.get().toString().toLowerCase();
             log.info("Driver instance name = " + driverInstanceName);
 
             String browserDriverName = null;
@@ -216,8 +185,8 @@ public class BaseTest {
             }
 
             if (driver != null) {
-                driver.manage().deleteAllCookies();
-                driver.quit();
+                driver.get().manage().deleteAllCookies();
+                driver.get().quit();
             }
         } catch (Exception e) {
             log.info(e.getMessage());
@@ -225,6 +194,8 @@ public class BaseTest {
             try {
                 Process process = Runtime.getRuntime().exec(cmd);
                 process.waitFor();
+
+                driver.remove();
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
@@ -282,7 +253,7 @@ public class BaseTest {
     }
 
     public WebDriver getDriverInstance() {
-        return this.driver;
+        return driver.get();
     }
 
     public void sleepInSecond(int time) {
