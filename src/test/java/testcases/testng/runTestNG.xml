@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nopcommerce" parallel = "class" thread = "2">
+    <listeners>
+        <listener class-name="actions.commons.MethodListener"></listener>>
+<!--        <listener class-name="reportConfig.ExtentTestListener"></listener>>-->
+    </listeners>
+
+    <parameter name="url" value="https://www.facebook.com/"></parameter>
+
+    <test name="Run On Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testcases.testng.Test_01"/>
+            <class name="testcases.testng.Test_02"/>
+        </classes>
+    </test> <!-- Test -->
+
+<!--    <test name="Run On Edge">-->
+<!--        <parameter name="browser" value="edge"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testcases.user.Level_5_Page_Factory"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
+
+</suite> <!-- Suite -->

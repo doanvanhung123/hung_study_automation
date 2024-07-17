@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nopcommerce">
+    <listeners>
+        <listener class-name="actions.commons.MethodListener"></listener>>
+<!--        <listener class-name="reportConfig.ExtentTestListener"></listener>>-->
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+    </listeners>
+
+<!--    <test name="Run On FireFox">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testcases.user.Level_4_Multiple_Browser"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <parameter name="environment" value="dev"></parameter>
+    <test name="Run On Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testcases.user.Level_21_Mutilple_environment"/>
+        </classes>
+    </test> <!-- Test -->
+
+<!--    <test name="Run On Edge">-->
+<!--        <parameter name="browser" value="edge"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testcases.user.Level_5_Page_Factory"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
+
+</suite> <!-- Suite -->

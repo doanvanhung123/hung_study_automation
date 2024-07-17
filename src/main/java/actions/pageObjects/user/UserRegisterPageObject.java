@@ -1,6 +1,7 @@
 package actions.pageObjects.user;
 
 import actions.commons.BasePage;
+import actions.commons.PageGeneratorManager;
 import interfaces.PageUIs.user.UserRegisterPageUI;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -75,9 +76,10 @@ public class UserRegisterPageObject extends BasePage {
         return getElementText(driver, UserRegisterPageUI.REGISTER_SUCCESS_MESSAGE);
     }
 
-    public void clickLogoutLink() {
+    public UserHomePageObject clickLogoutLink() {
         waitForElementClickable(driver, UserRegisterPageUI.LOGOUT_LINK);
         clickToElement(driver, UserRegisterPageUI.LOGOUT_LINK);
+        return PageGeneratorManager.getUserHomePage(driver);
     }
 
     public String getErrorExistingEmailMessage() {

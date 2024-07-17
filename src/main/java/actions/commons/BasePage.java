@@ -136,12 +136,12 @@ public class BasePage {
 
 
     private String getDynamicXpath(String locatorType, String... values) {
-        System.out.println("Locator Type Befor = " + locatorType);
+//        System.out.println("Locator Type Before = " + locatorType);
         if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=")) {
             locatorType = String.format(locatorType, (Object[]) values);
         }
-        System.out.println("Value map to locator = " + values.toString());
-        System.out.println("Locator Type After = " + locatorType);
+//        System.out.println("Value map to locator = " + values.toString());
+//        System.out.println("Locator Type After = " + locatorType);
         return locatorType;
     }
 
@@ -175,7 +175,7 @@ public class BasePage {
 
     protected void selectItemInDefaultDropdown(WebDriver webDriver, String locator, String itemText) {
         Select select = new Select(getWebElement(webDriver, locator));
-        select.selectByValue(itemText);
+        select.selectByVisibleText(itemText);
     }
 
     protected void selectItemInDefaultDropdown(WebDriver webDriver, String locator, String itemText, String... dynamicText) {
@@ -211,6 +211,10 @@ public class BasePage {
 
     protected String getElementAttribute(WebDriver driver, String locator, String attributeName) {
         return getWebElement(driver, locator).getAttribute(attributeName);
+    }
+
+    protected String getElementAttribute(WebDriver driver, String locator, String attributeName,String... dynamicXpath) {
+        return getWebElement(driver, getDynamicXpath(locator,dynamicXpath)).getAttribute(attributeName);
     }
 
     protected String getElementCssValue(WebDriver driver, String locator, String propertyName) {
@@ -333,6 +337,7 @@ public class BasePage {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].click();", getWebElement(driver, locator));
     }
+
 
     protected void scrollToElementByJS(WebDriver driver, String locator) {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -486,5 +491,44 @@ public class BasePage {
         clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
+    public Set<Cookie> getAllCookies(WebDriver driver){
+        return driver.manage().getCookies();
+    }
 
+    public void setCookies(WebDriver driver,Set<Cookie> cookies){
+        for (Cookie cookie:cookies){
+            driver.manage().addCookie(cookie);
+        }
+        sleepInSecond(3);
+    }
+    //Patten object
+    public void inputToTextBoxByID(WebDriver driver,String textBoxID,String value) {
+        waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textBoxID);
+        sendkeyToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,value,textBoxID);
+    }
+
+    public void clickToButtonByText(WebDriver driver,String textBoxID) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT,textBoxID);
+        clickToElement(driver,BasePageUI.DYNAMIC_BUTTON_BY_TEXT,textBoxID);
+    }
+
+    public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME,dropdownAttributeName);
+        selectItemInDefaultDropdown(driver,BasePageUI.DYNAMIC_DROPDOWN_BY_NAME,itemValue,dropdownAttributeName);
+    }
+
+    public void clickToRadioButtonByLabel(WebDriver driver, String radioLabel) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_RADIO_BY_LABEL,radioLabel);
+        checkToDefaultCheckBoxOrRadio(driver,BasePageUI.DYNAMIC_RADIO_BY_LABEL,radioLabel);
+    }
+
+    public void clickToCheckBoxByLabel(WebDriver driver, String checkboxLabel) {
+        waitForElementClickable(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL,checkboxLabel);
+        clickToElement(driver,BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL,checkboxLabel);
+    }
+
+    public String getTextboxValueByID(WebDriver driver, String textboxID) {
+        waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
+        return getElementAttribute(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,"value",textboxID);
+    }
 }

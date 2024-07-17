@@ -1,11 +1,19 @@
-23:08:50| 1| INFO| - 
-23:09:00| 1| INFO| - Register - Step 01: Navigate to Register page
-23:09:01| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
-23:09:01| 1| INFO| - Register - Step 03 : Click to Register button
-23:09:02| 1| INFO| - Register - Step 04 : Verify register success message is displayed
-23:09:02| 1| INFO| - Register - Step 05 : Click to logout link
-23:09:03| 1| INFO| - Login - Step 01 : Navigate to Login page
-23:09:03| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is afc3880@mail.vn
-23:09:03| 1| INFO| - Login - Step 03 : click to login button 
-23:09:04| 1| INFO| - Login - Step 04 : verify My account link is displayed
-23:09:04| 1| INFO| - Login - Step 04 : click to my account link
+00:49:53| 1| INFO| - Test log
+00:49:56| 1| INFO| - Register - Step 01: Navigate to Register page
+00:49:57| 1| INFO| - Register - Step 01: Select gender
+00:49:57| 1| INFO| - Register - Step 02 : Enter to Firtname textbox with value isAutomation
+00:49:57| 1| INFO| - Register - Step 02 : Enter to lastName textbox with value isAutomation
+00:49:58| 1| INFO| - Register - Step 02 : Enter to Email textbox with value isAutomation
+00:49:58| 1| INFO| - Register - Step 01: Select checkbox
+00:49:58| 1| INFO| - Register - Step 02 : Enter to Password textbox with value isAutomation
+00:49:58| 1| INFO| - Register - Step 02 : Enter to Confirm Password textbox with value isAutomation
+00:49:58| 1| INFO| - Register - Step 03 : Click to Register button
+00:49:58| 1| INFO| - Register - Step 04 : Verify register success message is displayed
+00:49:59| 1| INFO| -  -------------------------- PASSED -------------------------- 
+00:49:59| 1| INFO| - Register - Step 05 : Click to logout link
+00:49:59| 1| INFO| - Login - Step 01 : Navigate to Login page
+00:50:00| 1| INFO| - Login - Step 02 : Enter to Email Text box with value is automation2015@mail.vn
+00:50:00| 1| INFO| - Login - Step 02 : Enter to Password Text box with value is 132456
+00:50:00| 1| INFO| - Login - Step 03 : click to login button 
+00:50:01| 1| INFO| - Login - Step 04 : verify My account link is displayed
+00:50:01| 1| INFO| -  -------------------------- PASSED -------------------------- 
